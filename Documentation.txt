@@ -1,0 +1,6 @@
+This document will contain all the documentation read and used for this project.
+
+Day 1: 19/06/2023
+https://docs.djangoproject.com/en/4.2/
+
+This website was used to get accustomed with django. During the morning, I practice using their tutorial.
