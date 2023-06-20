@@ -25,3 +25,7 @@ This is the official django forum that I may consult during development.
 
 
 ## Day 2 : 20/06/2023
+
+Their has not been more documentation use than the one already given yesterday.
+
+## Day 3 : 21/06/2023

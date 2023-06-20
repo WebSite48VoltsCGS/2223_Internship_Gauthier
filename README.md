@@ -20,3 +20,15 @@ All the code was given during the tutorial but I understood most of it (some det
 
 
 ## Day 2 : 20/06/2023
+
+### MORNING:
+
+I created the database in a basic way to test some function on them and to debug stuff. Everything seems to work just fine.
+
+### AFTERNOON:
+
+I modified the database to be more precise with what it will end up beeing. Currently, nothing has been tested because the code to put everything on the site is not yet updated. It will probably be done this evening or tomorrow morning.
+
+## DAY : 21/06/2023
+
+### MORNING
