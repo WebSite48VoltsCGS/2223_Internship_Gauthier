@@ -14,9 +14,9 @@ def is_positive(value):
 
 
 class Article(models.Model):
-        product = models.CharField(max_length=200)
-        marque = models.CharField(max_length=200)
-        model = models.CharField(max_length = 200)
+        product = models.CharField(max_length=200,default="")
+        marque = models.CharField(max_length=200,default="")
+        model = models.CharField(max_length = 200,default="")
         buying_price = models.FloatField(validators = [is_positive],default = 0)
         stock = models.IntegerField(validators = [is_positive],default = 0)
         location_price = models.FloatField(validators = [is_positive],default = 0)
@@ -25,7 +25,7 @@ class Article(models.Model):
 
     
         def __str__(self):
-                return (self.name + " " + self.model)
+                return (self.product + " " + self.model)
 
         @admin.display(
                 boolean=True,
@@ -38,12 +38,13 @@ class Article(models.Model):
 
 
 class Client(models.Model):
-        asso = models.BooleanField()
+        asso = models.BooleanField(default = True)
         siret = models.IntegerField(default = 0)
-        adress = models.CharField(max_length = 200)
-        name = models.CharField(max_length = 200)
-        user_name = models.CharField(max_length = 200)
-        user_lastname = models.CharField(max_length = 200)
+        adress = models.CharField(max_length = 200,default="")
+        name = models.CharField(max_length = 200,default="")
+        user_name = models.CharField(max_length = 200,default="")
+        user_lastname = models.CharField(max_length = 200,default="")
+        email = models.EmailField(default="")
 
 
         def __str__(self):
@@ -51,16 +52,25 @@ class Client(models.Model):
 
 
 class Commande(models.Model):
+        article = models.ForeignKey(Article, on_delete = models.CASCADE)
+        number = models.IntegerField(validators = [is_positive],default = 0)
+
+        def __str__(self):
+                return str(self.article) + " : " + str(self.number)
+
+
+class Vente(models.Model):
         id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
-        id_article = models.ForeignKey(Article, on_delete=models.CASCADE)       # devra être une liste
-        number = models.IntegerField(validators = [is_positive],default = 0)    # devra être une liste
-        paiement = models.BooleanField()
-        a_payer = models.BooleanField()
-        est_paye = models.BooleanField()
-        cmd_passe = models.DateTimeField()
+        id_commande = models.ManyToManyField(Commande)
+        paiement = models.BooleanField(default = True)
+        a_payer = models.BooleanField(default = False)
+        cmd_passe = models.DateTimeField(auto_now_add=True)
         cmd_paye = models.DateTimeField()
         deb_loc = models.DateTimeField()
         end_loc = models.DateTimeField()
 
         def __str__(self):
                 return str(self.id) + " " + str(self.id_client)
+
+
+
