@@ -29,6 +29,18 @@ I created the database in a basic way to test some function on them and to debug
 
 I modified the database to be more precise with what it will end up beeing. Currently, nothing has been tested because the code to put everything on the site is not yet updated. It will probably be done this evening or tomorrow morning.
 
-## DAY : 21/06/2023
+## DAY 3: 21/06/2023
 
-### MORNING
+### MORNING AND AFTERNOON:
+
+The day was spent working on the database, a lot of problems occured because I was not acquainted to the django syntaxe yet. Everything was back to normal at the end of the day and it mostly only remain to precise a bit more the constraint of the different tables.
+
+## DAY 4: 22/06/2023
+
+### MORNING:
+
+Continue to work on the database. At noon, it was over and just need the specialisation like check if their are no repeating email adresses, etc...
+
+### AFTERNOON:
+
+The database is "finish" for what I know, I'll ask tomorrow if more details need to be added or if I forgot something. Next I'll focus on the extraction of data from the .tex files and how to store them.

@@ -1,6 +1,4 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
+from django.http import HttpResponse
 from django.views import generic
 
 from .models import Article,Client,Commande,Vente
@@ -20,7 +18,7 @@ class DetailView(generic.DetailView):
     template_name = "sql/detail.html"
 
     def get_queryset(self):
-        return Article.objects.filter(stock >0)
+        return Article.objects.filter(self.stock >0)
 
 def index(request):
     item_list = Article.objects.order_by("stock")

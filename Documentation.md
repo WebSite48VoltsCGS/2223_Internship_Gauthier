@@ -29,3 +29,11 @@ This is the official django forum that I may consult during development.
 Their has not been more documentation use than the one already given yesterday.
 
 ## Day 3 : 21/06/2023
+
+### [https://openclassrooms.com/fr/courses/7172076-debutez-avec-le-framework-django](https://openclassrooms.com/fr/courses/7172076-debutez-avec-le-framework-django)
+
+The official openclassroom courses on django. I use them to be more acquainted with databases.
+
+## Day 4 : 22/06/2023
+
+Their has not been more documentation use than the one already given the previous days.
