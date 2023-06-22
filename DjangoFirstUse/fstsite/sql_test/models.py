@@ -8,9 +8,19 @@ from django.utils import timezone
 # Create your models here.
 
 
+# Macro definition
+
+
+
+# Extra functions
+
+
 def is_positive(value):
         if value <= 0:
-                raise ValidationError("Cannot be a negative value")
+                raise ValidationError("Cannot be 0 or a negative value")
+
+
+# Class definition
 
 
 class Article(models.Model):
@@ -25,7 +35,7 @@ class Article(models.Model):
 
     
         def __str__(self):
-                return (self.product + " " + self.model)
+                return self.product + " " + self.model
 
         @admin.display(
                 boolean=True,
@@ -48,15 +58,27 @@ class Client(models.Model):
 
 
         def __str__(self):
-                return str(self.id)
+                return str(self.name) + " represented by " + str(self.user_name) + " " + str(self.user_lastname)
 
 
 class Commande(models.Model):
         article = models.ForeignKey(Article, on_delete = models.CASCADE)
-        number = models.IntegerField(validators = [is_positive],default = 0)
+        number = models.IntegerField(default = 1)
 
+        def clean(self):
+                is_positive(self.number)
+                article = self.article
+
+                if article.stock ==0 or article.stock < article.minimal_lot:
+                        raise ValidationError("This product is currently unvailable")
+                if article.stock - self.number < 0:
+                        raise ValidationError("Not enough product in stock. Their is " + str(article.stock) + " left")
+                if article.minimal_lot - self.number > 0:
+                        raise ValidationError("Cannot buy less than " + str(article.minimal_lot))
+
+                
         def __str__(self):
-                return str(self.article) + " : " + str(self.number)
+                return str(self.number) + " " + str(self.article) 
 
 
 class Vente(models.Model):
@@ -68,9 +90,13 @@ class Vente(models.Model):
         cmd_paye = models.DateTimeField()
         deb_loc = models.DateTimeField()
         end_loc = models.DateTimeField()
+        bid_date = models.DateTimeField(default = timezone.now)
+        got_paied = models.DateTimeField(default = timezone.now)
+
 
         def __str__(self):
-                return str(self.id) + " " + str(self.id_client)
+                client = self.id_client
+                return str(self.id) + " to the name of " + str(client.user_name) + " " + str(client.user_lastname)
 
 
 

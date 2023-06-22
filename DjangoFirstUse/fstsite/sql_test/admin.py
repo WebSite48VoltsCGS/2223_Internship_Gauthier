@@ -21,13 +21,13 @@ fields = "fields"
 
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
-                ("Product",{fields : ["product"]}),
-                ("Model",{fields : ["model"]}),
-                ("Purchase price",{fields:["buying_price"]}),
-                ("Stock",{fields:["stock"]}),
-                ("Location price",{fields:["location_price"]}),
-                ("Weight",{fields:["weight"]}),
-                ("Minimal bundle",{fields:["minimal_lot"]}),
+                (None ,{fields : ["product"]}),
+                (None ,{fields : ["model"]}),
+                (None ,{fields:["buying_price"]}),
+                (None ,{fields:["stock"]}),
+                (None ,{fields:["location_price"]}),
+                (None ,{fields:["weight"]}),
+                (None ,{fields:["minimal_lot"]}),
                 ]
 
     list_display = ["product","model","is_in_stock"]
@@ -36,18 +36,18 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class ClientAdmin(admin.ModelAdmin):
     fieldsets = [
-                ("Asso", {fields : ["asso"]}),
-                ("Name",{fields:["name"]}),
-                ("Siret", {fields : ["siret"]}),
-                ("Firstname",{fields:["user_name"]}),
-                ("Lastname",{fields:["user_lastname"]}),
-                ("Adress",{fields:["adress"]}),
-                ("Email",{fields:["email"]}),
+                (None , {fields : ["asso"]}),
+                (None ,{fields:["name"]}),
+                (None , {fields : ["siret"]}),
+                (None ,{fields:["user_name"]}),
+                (None ,{fields:["user_lastname"]}),
+                (None ,{fields:["adress"]}),
+                (None ,{fields:["email"]}),
                 ]
 
     list_display = ["id","name","user_name","user_lastname","email"]
-    list_filter = ["id"]
-    search_fields = ["id"]
+    list_filter = ["id","name"]
+    search_fields = ["id","name"]
 
 
 class VenteAdmin(admin.ModelAdmin):
@@ -56,14 +56,15 @@ class VenteAdmin(admin.ModelAdmin):
 
 
     fieldsets = [
-                ("Client", {fields : ["id_client"]}),
-                ("Commandes",{fields:["id_commande"]}),
-                ("Paiement", {fields : ["paiement"]}),
-                ("Est à payer", {fields : ["a_payer"]}),
-                ("Commande payée" , {fields : ["cmd_paye"]}),
-                ("Début de location" , {fields : ["deb_loc"]}),
-                ("Fin de location" , {fields : ["end_loc"]}),
+                (None ,{fields : ["id_client"]}),
+                (None ,{fields:["id_commande"]}),
+                (None , {fields : ["paiement"]}),
+                (None , {fields : ["a_payer"]}),
+                (None  , {fields : ["cmd_paye"]}),
+                (None  , {fields : ["deb_loc"]}),
+                (None  , {fields : ["end_loc"]}),
                 ]
+    
 
     
     list_display = ["id_client","cmd_passe","paiement","a_payer","cmd_paye","deb_loc","end_loc"]
@@ -73,8 +74,8 @@ class VenteAdmin(admin.ModelAdmin):
 
 class CommandeAdmin(admin.ModelAdmin):
     fieldsets = [
-                ("Article", {fields : ["article"]}),
-                ("Nombre",{fields:["number"]}),
+                (None , {fields : ["article"]}),
+                (None ,{fields:["number"]}),
                 ]
 
     list_display = ["article","number"]
