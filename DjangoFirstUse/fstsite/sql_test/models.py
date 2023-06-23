@@ -33,7 +33,7 @@ class Article(models.Model):
     minimal_lot = models.IntegerField(validators=[is_positive], default=0)
 
     def __str__(self):
-        return self.product + " " + self.model
+        return str(self.product) + " " + str(self.model)
 
     @admin.display(
         boolean=True,
@@ -45,19 +45,19 @@ class Article(models.Model):
 
 class Client(models.Model):
     asso = models.BooleanField(default=True)
-    siret = models.IntegerField(null=True,blank=True,unique = True)
+    siret = models.IntegerField(null=True, blank=True, unique=True)
     adress = models.CharField(max_length=200, default="")
-    name = models.CharField(max_length=200, null=True,blank=True,unique = True)
+    name = models.CharField(max_length=200, null=True, blank=True, unique=True)
     user_name = models.CharField(max_length=200, default="")
     user_lastname = models.CharField(max_length=200, default="")
-    email = models.EmailField(default="",unique = True)
+    email = models.EmailField(default="", unique=True)
 
     class Meta:
-            constraints = [
-                UniqueConstraint(fields=['email'], name='email'),
-                UniqueConstraint(fields=['siret'], name='siret'),
-                UniqueConstraint(fields=['name'], name='name'),
-            ]
+        constraints = [
+            UniqueConstraint(fields=['email'], name='email'),
+            UniqueConstraint(fields=['siret'], name='siret'),
+            UniqueConstraint(fields=['name'], name='name'),
+        ]
 
     def __str__(self):
         if self.asso:
@@ -70,9 +70,9 @@ class Client(models.Model):
 
         if self.asso and self.siret is None:
             raise ValidationError("Siret must be filled out for an association")
-        if not(self.asso) and self.siret is not None:
+        if not self.asso and self.siret is not None:
             raise ValidationError("Cannot have a siret number for a person")
-        if not (self.asso) and self.name is not None:
+        if not self.asso and self.name is not None:
             raise ValidationError("Cannot have an association name for a person")
 
         # check of repetition
@@ -87,7 +87,7 @@ class Commande(models.Model):
         article = self.article
 
         if article.stock == 0 or article.stock < article.minimal_lot:
-            raise ValidationError("This product is currently unvailable")
+            raise ValidationError("This product is currently unavailable")
         if article.stock - self.number < 0:
             raise ValidationError("Not enough product in stock. Their is " + str(article.stock) + " left")
         if article.minimal_lot - self.number > 0:
@@ -98,17 +98,17 @@ class Commande(models.Model):
 
 
 class Vente(models.Model):
-    id_bid = models.CharField(max_length=13,default="")
+    id_bid = models.CharField(max_length=13, default="")
     id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
     id_commande = models.ManyToManyField(Commande)
-    paiement = models.BooleanField(default=True)
+    billing = models.BooleanField(default=True)
     a_payer = models.BooleanField(default=False)
     cmd_passe = models.DateTimeField(default=timezone.now)
-    cmd_paye = models.DateTimeField(null=True,blank=True)
+    cmd_payed = models.DateTimeField(null=True, blank=True)
     deb_loc = models.DateTimeField()
     end_loc = models.DateTimeField()
     bid_date = models.DateTimeField(null=True, blank=True)
-    got_paied = models.DateTimeField(null=True, blank=True)
+    got_payed = models.DateTimeField(null=True, blank=True)
 
 
     def generate_id(self):
@@ -130,15 +130,15 @@ class Vente(models.Model):
             raise ValidationError("Impossible to have a renting start date after the end of the renting")
         if self.deb_loc < self.cmd_passe:
             raise ValidationError("Impossible to have a renting before a command has been sent")
-        if (self.a_payer) and (self.got_paied is None):
+        if self.a_payer and (self.got_payed is None):
             raise ValidationError("Impossible to have a date of payment if no payment has been made")
-        if self.got_paied is not None:
-            if self.got_paied < self.cmd_passe:
+        if self.got_payed is not None:
+            if self.got_payed < self.cmd_passe:
                 raise ValidationError("Impossible to have been payed before the command has been sent")
         # update of the stock
 
         if self.a_payer:
-            if not(Vente.objects.get(pk=self.pk).a_payer):
+            if not Vente.objects.get(pk=self.pk).a_payer:
                 for commande in self.id_commande.all():
                     article = commande.article
                     article.stock -= commande.number

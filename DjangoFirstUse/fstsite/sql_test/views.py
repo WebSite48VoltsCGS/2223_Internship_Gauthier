@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.views import generic
 
-from .models import Article,Client,Commande,Vente
+from .models import Article, Client, Commande, Vente
 
 # Create your views here.
 
@@ -10,7 +10,6 @@ class IndexView(generic.ListView):
     context_object_name = "latest_data"
 
     def get_queryset(self):
-        """Return the five product the most in stock."""
         return Article.objects.order_by("stock")[:5]
 
 class DetailView(generic.DetailView):
@@ -18,7 +17,7 @@ class DetailView(generic.DetailView):
     template_name = "sql/detail.html"
 
     def get_queryset(self):
-        return Article.objects.filter(self.stock >0)
+        return Article.objects.filter(self.stock > 0)
 
 def index(request):
     item_list = Article.objects.order_by("stock")
