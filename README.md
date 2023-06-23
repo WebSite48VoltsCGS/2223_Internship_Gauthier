@@ -44,3 +44,13 @@ Continue to work on the database. At noon, it was over and just need the special
 ### AFTERNOON:
 
 The database is "finish" for what I know, I'll ask tomorrow if more details need to be added or if I forgot something. Next I'll focus on the extraction of data from the .tex files and how to store them.
+
+## DAY 5: 23/06/2023
+
+### MORNING:
+
+Extract the data from the tex files et work on them to make it easier to transfer them into the csv file.
+
+### AFTERNOON:
+
+Transfer of the data into the csv file. Duplicate and empty field has been taking care of, everything is sorted in an alphabetic order. Last thing to do will be to see how the Name - Brand - etc cell is made to import everything into the database. After what, the database for the product will be over.

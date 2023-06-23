@@ -20,6 +20,8 @@ for file in os.listdir(source):
                     path_ext = os.path.join(extraction, "extraction.txt")
                     with open(path_ext, "a", encoding="utf-8") as txt:
                         txt.write(line)
+                    txt.close()
+        tex.close()
 
 
 

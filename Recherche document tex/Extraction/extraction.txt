@@ -4044,7 +4044,7 @@
 \Produit{CA/XX0.3 - Cordon XLR 3 femelle - XLR 3 mâle - longueur 30 cm}{2}{12.31}{13}{1} % 8.69
 \Produit{CA/XX20 - Cordon XLR 3 femelle - XLR 3 mâle - longueur 20 mètres}{2}{33.78}{13}{1} % 23.85
 \Produit{CA/SPK4/425/15 - Cordon Speakon NL4FX 4 x 2.5 mm2 - longueur 15 mètres}{2}{75.13}{13}{1} % 55.92
-\Produit{8MC/B8/19GTC/15 - Multipaire 8 circuits épanoui Mâle NF / boîtier NF terre commune - 15m}{1} {605.22}{13}{1} % 427.21
+\Produit{8MC/B8/19GTC/15 - Multipaire 8 circuits épanoui Mâle NF / boîtier NF terre commune - 15m}{1}{605.22}{13}{1} % 427.21
 \Produit{PGI/WARP - Support combiné pour 1 gobo métal taille B + iris - WARP ADB}{1}{124.57}{13}{1} % 113.44x²x²
 \Produit{Micro statique}{3}{10}{30}{1}
 \Produit{Petit pieds micro}{3}{6}{30}{1}
@@ -4155,7 +4155,7 @@
 \Produit{SK100G4 - Emetteur de poche Sennheiser G4 série 100}{4}{249.16}{5}{1}
 \Produit{EM100G4 - Récepteur fixe HF G4 série 100}{4}{332.49}{5}{1}
 \Produit{DPA 4060 noir - micro miniature omni noir}{4}{319.49}{5}{1}
-\Produit{Adaptateur DPA microdot vers mini-jack 3.5 Sennheiser EW}{4}{74.31}{5}{1}\sstotalD{}
+\Produit{Adaptateur DPA microdot vers mini-jack 3.5 Sennheiser EW}{4}{74.31}{5}{1}
 \Produit{ULXD4D - Récepteur double}{1}{70}{10}{3}
 \Produit{ULXD1 - Emetteur de poche}{1}{25}{10}{3}
 \Produit{DPA 4061 noir - micro miniature omni noir}{1}{30}{10}{3}
