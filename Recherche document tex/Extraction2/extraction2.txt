@@ -1,0 +1,1314 @@
+\def\ClientNom{Elokami Production}	
+\def\ClientAdresse{Rue du Bouvreuil, 95610 Éragny}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Elokami Production}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Azalee}	
+\def\ClientAdresse{Rue du Bouvreuil \\ Parc d'Activités de la Danne \\ 95610 Eragny}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Levivier}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Levivier}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Elokami Production}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Rapid.Space International SASU}	
+\def\ClientAdresse{17 Rue du Pache \\ 75011 Paris, France}
+\def\ClientNom{Mlle Marie-Valentine \textsc{Glica}}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Marie-Valentine \textsc{Glica}}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Marie-Valentine \textsc{Glica}}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Marie-Valentine \textsc{Glica}}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mlle Marie-Valentine \textsc{Glica}}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{Elokami Production}	
+\def\ClientAdresse{Rue du Bouvreuil, 95610 Éragny}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{AgroParisTech Asso Gay Pride}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{Asso Technoparade IPGP}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Association Gala IPGP}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Mairie d'Auvers sur Oise}	
+\def\ClientAdresse{Hôtel de ville\\Rue du Général de Gaulle \\ 95430 Auvers sur Oise}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Association La Ruche}	
+\def\ClientAdresse{12 Allée des petits pains \\ 95800 Cergy Saint Christophe}
+\def\ClientNom{Matthieu Espaze}	
+\def\ClientAdresse{}
+\def\ClientNom{Théatre des turbulences}	
+\def\ClientAdresse{11 rue Louis Eschard \\ 93290 Tremblay en France}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{A préciser}	
+\def\ClientAdresse{\\}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{A préciser}	
+\def\ClientAdresse{\\}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Festival baroque de Pontoise}	
+\def\ClientAdresse{7 place du petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Eiffage Energie Ile-de-France}	
+\def\ClientAdresse{10 Rue Lavoisier \\ 95300 Pontoise}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Agglomération 2 Rives de Seine}
+\def\ClientAdresse{100 Avenue Vanderbilt \\ 78955 Carrières-sous-Poissy}
+\def\ClientNom{Eiffage Energie Ile-de-France}	
+\def\ClientAdresse{10 Rue Lavoisier \\ 95300 Pontoise}
+\def\ClientNom{Agglomération 2 Rives de Seine}
+\def\ClientAdresse{100 Avenue Vanderbilt \\ 78955 Carrières-sous-Poissy}
+\def\ClientNom{à préciser nom / adresse de facturation}
+\def\ClientAdresse{}
+\def\ClientNom{Festival baroque de Pontoise}	
+\def\ClientAdresse{7 place du petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Matthieu Espaze}	
+\def\ClientAdresse{}
+\def\ClientNom{à préciser nom / adresse de facturation}
+\def\ClientAdresse{}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Eiffage Energie Ile-de-France}	
+\def\ClientAdresse{10 Rue Lavoisier \\ 95300 Pontoise}
+\def\ClientNom{Eiffage Energie Ile-de-France}	
+\def\ClientAdresse{10 Rue Lavoisier \\ 95300 Pontoise}
+\def\ClientNom{Eiffage Energie Ile-de-France}	
+\def\ClientAdresse{10 Rue Lavoisier \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mickael Boufflers}	
+\def\ClientAdresse{}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Azalee}	
+\def\ClientAdresse{Rue du Bouvreuil \\ Parc d'Activités de la Danne \\ 95610 Eragny}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{CPBB}	
+\def\ClientAdresse{Complexe sportif des Maradas \\ 6 Passage du lycée}
+\def\ClientNom{Association HUG}	
+\def\ClientAdresse{15 avenue du Bol d'Air \\ 95220 Herblay}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{Jude Cadeau \\ Adresse à préciser}	
+\def\ClientAdresse{}
+\def\ClientNom{Jude Cadeau \\ Adresse à préciser}	
+\def\ClientAdresse{}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{M. Gandon}	
+\def\ClientAdresse{}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Lan Archi Numérique}	
+\def\ClientAdresse{}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Harmonia}	
+\def\ClientAdresse{17 rue du Château \\ 95300 PONTOISE}
+\def\ClientNom{Second Stage Pharma}	
+\def\ClientAdresse{84 rue Claude Bernard \\ 75 005 Paris}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Association TYO}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{AgroParisTech Asso Gay Pride}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{CESE 95}	
+\def\ClientAdresse{}
+\def\ClientNom{Mairie de Taverny}	
+\def\ClientAdresse{Hôtel de Ville \\ 2 Place Charles de Gaulle \\ BP 90002 95155 Taverny}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Sebastien Ferrieres}	
+\def\ClientAdresse{}
+\def\ClientNom{Christelle Massy \\ christelle.massy@hotmail.fr \\ 06 09 12 17 71 }	
+\def\ClientAdresse{49 passage des Lauzes \\ 95800 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{Association TYO}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{MJC de Louveciennes}	
+\def\ClientAdresse{18 rue de la Princesse \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{A préciser}	
+\def\ClientAdresse{A préciser}
+\def\ClientNom{Festival de la Terre}	
+\def\ClientAdresse{}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{MJC de Louveciennes}	
+\def\ClientAdresse{18 rue de la Princesse \\ 78430 Louvecienes}
+\def\ClientNom{Festival de la Terre}	
+\def\ClientAdresse{Adresse à préciser}
+\def\ClientNom{Pourquoi pas la lune}	
+\def\ClientAdresse{67 Boulevard du Général Martial Valin \\ 75015 Paris}
+\def\ClientNom{Groupe CANAL+}	
+\def\ClientAdresse{1, place du Spectacle \\ 92863 Issy-Les-Moulineaux Cedex 9}
+\def\ClientNom{Groupe CANAL+}	
+\def\ClientAdresse{1, place du Spectacle \\ 92863 Issy-Les-Moulineaux Cedex 9}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{NPA Production}	
+\def\ClientAdresse{45, avenue Victor Hugo \\ 93300 Aubervilliers}
+\def\ClientNom{Le Relais}	
+\def\ClientAdresse{1355 route de la voie romaine \\ 76590 Le Catelier}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Oh Paradis}	
+\def\ClientAdresse{13 Rue Sainte-Catherine, 69001 Lyon}
+\def\ClientNom{Oh Paradis}	
+\def\ClientAdresse{13 Rue Sainte-Catherine, 69001 Lyon}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{M. COULON Robin}	
+\def\ClientAdresse{}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Association TYO}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Mlle Levivier}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Communauté d'Agglomération \\ de Cergy-Pontoise}	
+\def\ClientAdresse{Hotel d'Agglomération \\ 95027 Cergy-Pontoise}
+\def\ClientNom{Junior ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Ville de saint-ouen l'aumône}	
+\def\ClientAdresse{2 place Pierre Mendès-France \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{TYO ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Ville de saint-ouen l'aumône}	
+\def\ClientAdresse{2 place Pierre Mendès-France \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Harmonia}	
+\def\ClientAdresse{17 rue du Château \\ 95300 PONTOISE}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre de Paille}	
+\def\ClientAdresse{4, impasse Joseph Leduc \\ 60000 Beauvais}
+\def\ClientNom{Cie la Nuit Remue}	
+\def\ClientAdresse{18 rue François Perier \\ 34000 Montpellier}
+\def\ClientNom{Cie la Nuit Remue}	
+\def\ClientAdresse{18 rue François Perier \\ 34000 Montpellier}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Elokami Production}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Collège Vauban}	
+\def\ClientAdresse{23 Place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Tri Sound Engineering}	
+\def\ClientAdresse{73 rue Nationale \\ 95000 Cergy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{TYO ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{MJC de Louveciennes}	
+\def\ClientAdresse{18 rue de la Princesse \\ 78430 Louvecienes}
+\def\ClientNom{MJC de Louveciennes}	
+\def\ClientAdresse{18 rue de la Princesse \\ 78430 Louvecienes}
+\def\ClientNom{MJC de Louveciennes}	
+\def\ClientAdresse{18 rue de la Princesse \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{YMCM Prod}	
+\def\ClientAdresse{55 rue de la Boétie \\ 75008 Paris}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Association La Tambouille}	
+\def\ClientAdresse{5 ruelle du colombier \\ 78410 Nézel}
+\def\ClientNom{Association Toumélé}	
+\def\ClientAdresse{3 Chaussée Saint-Vincent \\ 78580 Maule}
+\def\ClientNom{But Osny Pontoise}	
+\def\ClientAdresse{Centre Commercial de l'oseraie \\ 95520 OSNY}
+\def\ClientNom{But Osny Pontoise}	
+\def\ClientAdresse{Centre Commercial de l'oseraie \\ 95520 OSNY}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Rue du théâtre \\ 95000 CERGY}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Rue du théâtre \\ 95000 CERGY}
+\def\ClientNom{}	
+\def\ClientAdresse{Paroisse de la Cathédrale-Basilique \\ 8 rue de la Boulangerie \\ 93200 Saint-Denis}
+\def\ClientNom{But Ezanville}	
+\def\ClientAdresse{route De Domont \\ 95460 Ezanville}
+\def\ClientNom{But Ezanville}	
+\def\ClientAdresse{route De Domont \\ 95460 Ezanville}
+\def\ClientNom{Mlle Levivier}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place de la Paix \\ 95000 Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Piscine Vaureal}	
+\def\ClientAdresse{Avenue de la Paix \\ 95490 Vauréal}
+\def\ClientNom{paroisse St Maurice de la Boissière}	
+\def\ClientAdresse{59 rue édouard Branly \\ 93100 Montreuil}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{paroisse St Maurice de la Boissière}	
+\def\ClientAdresse{59 rue édouard Branly \\ 93100 Montreuil}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Fédération des syndicats\\ exploitants agricole d'île de France}
+\def\ClientAdresse{2 Avenue Jeanne d'Arc \\ 78150 Le Chesnay}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{The Griffers}	
+\def\ClientAdresse{}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{BDE Essec}	
+\def\ClientAdresse{3 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{BNP Paribas}	
+\def\ClientAdresse{Maison Dorée \\ 20 boulebard des italiens \\ 75009 Paris}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergu}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{YMCM Prod}	
+\def\ClientAdresse{55 rue de la Boétie \\ 75008 Paris}
+\def\ClientNom{}	
+\def\ClientAdresse{}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{YMCM Prod}	
+\def\ClientAdresse{55 rue de la Boétie \\ 75008 Paris}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{A préciser}
+\def\ClientAdresse{}
+\def\ClientNom{Collège Vauban}	
+\def\ClientAdresse{23 Place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Virginie Dacosta}	
+\def\ClientAdresse{}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{Nicolas Trocmé}	
+\def\ClientAdresse{}
+\def\ClientNom{Mairie de Chambly}	
+\def\ClientAdresse{Monsieur le Maire \\ 60542 Chambly}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{FSE Collège Chabanne}	
+\def\ClientAdresse{Impasse Chabanne \\ 95300 Pontoise}
+\def\ClientNom{M. Garet}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Washington Dead Cats}
+\def\ClientAdresse{A préciser}
+\def\ClientNom{Washington Dead Cats}
+\def\ClientAdresse{A préciser}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Association Toumélé}
+\def\ClientAdresse{3 chaussé Saint-Vincent \\ 78580 Maule}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Ville de saint-ouen l'aumône}	
+\def\ClientAdresse{2 place Pierre Mendès-France \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{M. Farrokhi}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{BDA ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie Gaillont sur Montcient}	
+\def\ClientAdresse{Rue de la Montcient \\ 78250 Gaillon-sur-Montcient}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie d'Ermont}	
+\def\ClientAdresse{100 rue Louis Savoie \\ 95120 Ermont}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Renoma}	
+\def\ClientAdresse{113, avenue Victor Hugo \\ 75116 Paris}
+\def\ClientNom{Caro et Eric}
+\def\ClientAdresse{7 rue de l'église \\ 27420 Moufflaines}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{VoNews}
+\def\ClientAdresse{4 rue de la Prairie \\ 95000 Cergy}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mlle Elisabeth Laskine \\ Conseil Etudiant de Cergy-Pontoise}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 6 passage du Lycée \\ 95300 \textsc{Pontoise}}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ecole Jean-Baptise de la Salle }	
+\def\ClientAdresse{8 place de la résistance et de la déportation \\ 93200 Saint-Denis}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ITESCIA}	
+\def\ClientAdresse{8 Rue Pierre de Coubertin\\ 95300 Pontoise}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{Mairie d'Autouillet}	
+\def\ClientAdresse{33 Route des Châteaux \\ 78770 Autouillet}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Parc d'activité de la danne \\ Rue du bouvreuil \\ 95610 Eragny}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{M. Farrokhi}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENERTRAG}	
+\def\ClientAdresse{Cap Cergy - Bâtiment B \\ 4-6 rue des Chauffours \\ 95015 Cergy Pontoise Cédex}
+\def\ClientNom{ENERTRAG}	
+\def\ClientAdresse{Cap Cergy - Bâtiment B \\ 4-6 rue des Chauffours \\ 95015 Cergy Pontoise Cédex}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{M. Florian Kenancha}
+\def\ClientAdresse{}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Mairie de Louveciennes}	
+\def\ClientAdresse{30 rue du Général Leclerc \\ 78430 Louvecienes}
+\def\ClientNom{Soirs de fête}	
+\def\ClientAdresse{17 rue Gustave Eiffel \\ 91070 Bondoufle}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{L'Apostrophe - Scène Nationale}	
+\def\ClientAdresse{Place des arts \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDA ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Collège et Lycée Vauban}	
+\def\ClientAdresse{23 Place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de saint-ouen l'aumône}	
+\def\ClientAdresse{2 place Pierre Mendès-France \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Conflans - Service Evenementiel}	
+\def\ClientAdresse{63 Rue Maurice Berteaux \\ 78700 Conflans-Sainte-Honorine}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Conflans - Service Evenementiel}	
+\def\ClientAdresse{63 Rue Maurice Berteaux \\ 78700 Conflans-Sainte-Honorine}
+\def\ClientNom{Collège et Lycée Vauban}	
+\def\ClientAdresse{23 Place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Cie MouvMatik}	
+\def\ClientAdresse{Visage du monde \\ 10 place du Nautilus \\ 95800 Cergy}
+\def\ClientNom{Mairie d'Autouillet}	
+\def\ClientAdresse{33 Route des Châteaux \\ 78770 Autouillet}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairiue de Nucourt}
+\def\ClientAdresse{Rue de la Boutrolle \\ 95420 NUCOURT}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{SIARP}
+\def\ClientAdresse{73 rue de Gisors \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{BDA ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDA ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{BDA ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mairie de Carrières-sous-Poissy}	
+\def\ClientAdresse{1 Place Saint-Blaise \\ 78955 Carrières-sous-Poissy}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Rapid.Space International SASU}	
+\def\ClientAdresse{17 Rue du Pache \\ 75011 Paris, France}
+\def\ClientNom{Rapid.Space International SASU}	
+\def\ClientAdresse{17 Rue du Pache \\ 75011 Paris, France}
+\def\ClientNom{BDA ENSEA}
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{BDS APT}
+\def\ClientAdresse{1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{BDS APT}
+\def\ClientAdresse{1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Rapid.Space International SASU}	
+\def\ClientAdresse{17 Rue du Pache \\ 75011 Paris, France}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de l'Isle-Adam}	
+\def\ClientAdresse{43 Grande Rue \\ 95290 L'Isle-Adam}
+\def\ClientNom{Mairie d'Auvers-sur-oise}	
+\def\ClientAdresse{4 Place de la Mairie \\ 95430 Auvers-sur-Oise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{}	
+\def\ClientAdresse{Cellule Wei AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Morning Gloryville Paris}	
+\def\ClientAdresse{Carreau du Tempe - Paris}
+\def\ClientNom{CRT Paris Ile-de-France}	
+\def\ClientAdresse{11 rue du Faubourg Poissonnière \\ 75009 Paris}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie d'Autouillet}	
+\def\ClientAdresse{33 Route des Châteaux \\ 78770 Autouillet}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Rivage Investment}	
+\def\ClientAdresse{5, rue Drouot 75009 Paris}
+\def\ClientNom{Mairie de l'Isle Adam}	
+\def\ClientAdresse{1 avenue de Paris \\ 95290 L'Isle Adam}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{}	
+\def\ClientAdresse{}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Mantes-la-jolie}	
+\def\ClientAdresse{31 rue Gambetta \\ 78200 MANTES LA JOLIE}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Comité des fêtes d'Évry-Gregy-Sur-Yerres}	
+\def\ClientAdresse{3 Chemin Du Pont Des Romains \\ 77166 Evry-Gregy-Sur-Yerres}
+\def\ClientNom{Comité des fêtes d'Évry-Gregy-Sur-Yerres}	
+\def\ClientAdresse{3 Chemin Du Pont Des Romains \\ 77166 Evry-Gregy-Sur-Yerres}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Comité des fêtes d'Évry-Gregy-Sur-Yerres}	
+\def\ClientAdresse{3 Chemin Du Pont Des Romains \\ 77166 Evry-Gregy-Sur-Yerres}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Communauté de Communes du Vexin-Thelle}	
+\def\ClientAdresse{6 rue Bertinot Juel | Espace Vexin-Thelle N° 5 \\ 60240 Chaumont-en-Vexin}
+\def\ClientNom{FONDATION ROYAUMONT}	
+\def\ClientAdresse{Abbaye de Royaumont\\
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Communauté de Communes du Vexin-Thelle}	
+\def\ClientAdresse{6 rue Bertinot Juel | Espace Vexin-Thelle N° 5 \\ 60240 Chaumont-en-Vexin}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{BDA ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Menucourt}	
+\def\ClientAdresse{Rue Paster \\ 95180 Menucourt}
+\def\ClientNom{Comite des fêtes - Orgerus en fête}	
+\def\ClientAdresse{12 rue du moulin de l'étang \\ 78910 Orgerus}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Conseil départemental du Val-d'Oise}
+\def\ClientAdresse{2, avenue du Parc \\ CS 20201 CERGY}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{VoNews}
+\def\ClientAdresse{Domaine de Lastour \\ 30600 Vauvert}
+\def\ClientNom{ASV Danse - Sarah Lamy}
+\def\ClientAdresse{157, rue du pré aux moutons \\ 78670 Villennes sur seine}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Comité des fêtes d'Évry-Gregy-Sur-Yerres}	
+\def\ClientAdresse{3 Chemin Du Pont Des Romains \\ 77166 Evry-Gregy-Sur-Yerres}
+\def\ClientNom{Clever Cloud}
+\def\ClientAdresse{3 rue de l'Allier \\ 44000 Nantes}
+\def\ClientNom{SPOA Films et Digital}	
+\def\ClientAdresse{5 rue Legouve \\ 75010 Paris}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Florian Delattre}	
+\def\ClientAdresse{}
+\def\ClientNom{VoNews}
+\def\ClientAdresse{Domaine de Lastour \\ 30600 Vauvert}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Morning Gloryville Paris}	
+\def\ClientAdresse{Carreau du Tempe - Paris}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{VoNews}
+\def\ClientAdresse{Domaine de Lastour \\ 30600 Vauvert}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie d'Autouillet}	
+\def\ClientAdresse{33 Route des Châteaux \\ 78770 Autouillet}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mlle Levivier}	
+\def\ClientAdresse{BDE AgroParisTech \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Comité des fêtes d'Évry-Gregy-Sur-Yerres}	
+\def\ClientAdresse{3 Chemin Du Pont Des Romains \\ 77166 Evry-Gregy-Sur-Yerres}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ENSEA}	
+\def\ClientAdresse{6 avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{2 rue des Pâtis \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{2 rue des Pâtis \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Paroisse de Cergy}
+\def\ClientAdresse{8 rue Philéas Fogg}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Paroisse de Cergy}
+\def\ClientAdresse{8 rue Philéas Fogg}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{2 rue des Pâtis \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Soirs de fêtes}
+\def\ClientAdresse{2 bis rue des bordes \\ 91070 Bondoufle}
+\def\ClientNom{Soirs de fêtes}
+\def\ClientAdresse{2 bis rue des bordes \\ 91070 Bondoufle}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{2 rue des Pâtis \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Hôpital Nord-Ouest Val-d'Oise}
+\def\ClientAdresse{6 Av. de l'Île de France \\ 95300 Pontoise}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{ASV Danse - Sarah Lamy}
+\def\ClientAdresse{157, rue du pré aux moutons \\ 78670 Villennes sur seine}
+\def\ClientNom{Ville de Saint-Witz}
+\def\ClientAdresse{1 Place Isabelle de Vy \\ 95470 Saint-Witz}
+\def\ClientNom{Augmented Acoustics}
+\def\ClientAdresse{36 rue des Cuffins \\ 78830 Bonnelles}
+\def\ClientNom{Eglise de Dieu à Vauréal}	
+\def\ClientAdresse{7 Avenue Louise Michel \\ 95490 Vauréal}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{2 rue des Pâtis \\ 95300 Pontoise}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Festival Baroque de Pontoise}	
+\def\ClientAdresse{7, place du Petit Martroy \\ 95300 Pontoise}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Ville de Courdimanche}
+\def\ClientAdresse{Hotel de Ville \\ rue vieille Saint-martin \\ 95800 Courdimanche}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Rose Mecanique Production}	
+\def\ClientAdresse{54 rue de Dunkerque \\ 75009 Paris}
+\def\ClientNom{En attendant}	
+\def\ClientAdresse{26 rue Pierre et Marie Curie \\ 94 200 Ivry sur Seine}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Warner Bros France \\ Contact : Guillaume Lecannelier}	
+\def\ClientAdresse{115 Avenue Charles de Gaulle \\ 92200 Neuilly-sur-Seine}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Mme Bénédicte COLLIN}	
+\def\ClientAdresse{}
+\def\ClientNom{Club Zic ENSEA}	
+\def\ClientAdresse{6, avenue du Ponceau \\ 95000 Cergy}
+\def\ClientNom{Cabaret ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{Ensemble Harmonia }	
+\def\ClientAdresse{17 rue du Château \\ 95300 PONTOISE}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{LAN Archi Numérique}	
+\def\ClientAdresse{}
+\def\ClientNom{CECP}	
+\def\ClientAdresse{Complexe Sportif des Maradas \\ 95300 Pontoise}
+\def\ClientNom{Le Domaine des Près Verts Spa}	
+\def\ClientAdresse{10/12 impasse des Près Verts \\ Hameau de Pochey \\ 21 230 JOUEY}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mme Morgat}	
+\def\ClientAdresse{}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Mme Morgat}	
+\def\ClientAdresse{}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{BDE ESSEC}	
+\def\ClientAdresse{1 Avenue Bernard Hirsch \\ 95021 Cergy-Pontoise}
+\def\ClientNom{Paroisse Ste Claire de Vauréal}	
+\def\ClientAdresse{2, place de l'abbé Pierre \\ 95490 Vaureal}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Covent Garden Studios}	
+\def\ClientAdresse{Rue du Bouvreuil \\ 95610 Éragny}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{Théâtre 95}	
+\def\ClientAdresse{Allée du Théatre \\ 95021 Cergy-Pontoise Cédex 01}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{Backline SARL}	
+\def\ClientAdresse{Z.I. Les Usines \\ 12 rue Boris Vian \\ 95310 Saint-Ouen l'Aumône}
+\def\ClientNom{BDE AgroParisTech}	
+\def\ClientAdresse{1 avenue Lucien Bretignières \\ 78850 Thivernal-Grignon}
+\def\ClientNom{Ensemble Harmonia }	
+\def\ClientAdresse{17 rue du Château \\ 95300 PONTOISE}
+\def\ClientNom{Mairie de Pontoise}	
+\def\ClientAdresse{2 Rue Victor Hugo \\ 95300 Pontoise}
+\def\ClientNom{CESE 95}	
+\def\ClientAdresse{2 avenue du Parc \\ 95000 Cergy}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}
+\def\ClientNom{M. Ollier}	
+\def\ClientAdresse{Festiv'Agro \\ 1 Avenue Lucien Bretignières \\ 78850 Thiverval-Grignon}

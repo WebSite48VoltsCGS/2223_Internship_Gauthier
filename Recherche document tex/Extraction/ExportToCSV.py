@@ -4,8 +4,8 @@ import csv
 
 # Macro and variable definition
 
-extract = "extraction.txt"
-docCSV = "extraction.csv"
+extract = "extractionV2.txt"
+docCSV = "extractionV2.csv"
 
 
 # Function definition
@@ -19,10 +19,7 @@ def delProduit():
         writer = csv.writer(fileCSV, delimiter=';')
         newlines = []
         for line in lines:
-            if line.startswith("\\Produit{"):
-                line = line.replace("\\Produit{", "", 1)
-            elif line.startswith("\\ProduitNP{"):
-                line = line.replace("\\ProduitNP{", "", 1)
+            line = line.replace("\\Produit{", "", 1)
             line = line.replace("}", ";")
             line = line.replace("{", "")
             newlines.append(line)
@@ -36,6 +33,9 @@ def delProduit():
             key = columns[0]
             if key not in dic and key != "":
                 dic[key] = columns
+            elif key in dic:
+                if len(dic[key]) < len(columns):
+                    dic[key] = columns
 
         newlines = list(dic.values())
 

@@ -48,9 +48,9 @@ class Client(models.Model):
     siret = models.IntegerField(null=True, blank=True, unique=True)
     adress = models.CharField(max_length=200, default="")
     name = models.CharField(max_length=200, null=True, blank=True, unique=True)
-    user_name = models.CharField(max_length=200, default="")
-    user_lastname = models.CharField(max_length=200, default="")
-    email = models.EmailField(default="", unique=True)
+    user_name = models.CharField(max_length=200, default="", blank=True)
+    user_lastname = models.CharField(max_length=200, default="", blank=True)
+    email = models.EmailField(default="", blank=True, unique=True)
 
     class Meta:
         constraints = [
@@ -62,6 +62,8 @@ class Client(models.Model):
     def __str__(self):
         if self.asso:
             return str(self.name) + " SIRET number " + str(self.siret)
+        elif self.user_lastname is None:
+            return str(self.user_name)
         else:
             return str(self.user_name) + " " + str(self.user_lastname)
 
