@@ -1,13 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  27 JUN 2023 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  28 JUN 2023 17:00
 entering extended mode
-**./devis.tex
-(devis.tex
+**D:/Git/Projet/2223_Internship_Gauthier/DjangoFirstUse/fstsite/devis/devis.tex
+
+(D:/Git/Projet/2223_Internship_Gauthier/DjangoFirstUse/fstsite/devis/devis.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count177
 \c@section=\count178
@@ -94,14 +95,36 @@ File: babel.def 2020/10/27 3.51 Babel common definitions
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-Package babel Info: You haven't specified a language. I'll use 'nil'
-(babel)             as the main language. Reported on input line 1151.
-
-(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/generic/babel\nil.ldf
-Language: nil 2020/10/27 3.51 Nil language
-\l@nil=\language80
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\frenc
+h.ldf
+Language: french 2020/10/10 v3.5l French support from the babel system
+Package babel Info: \l@acadian = using hyphenrules for french
+(babel)             (\language22) on input line 91.
+Package babel Info: \l@canadien = using hyphenrules for french
+(babel)             (\language22) on input line 92.
+\FB@nonchar=\count190
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count191
+\FBold@everypar=\toks19
+\FB@Mht=\dimen148
+\mc@charclass=\count192
+\mc@charfam=\count193
+\mc@charslot=\count194
+\std@mcc=\count195
+\dec@mcc=\count196
+\listindentFB=\dimen149
+\descindentFB=\dimen150
+\labelindentFB=\dimen151
+\labelwidthFB=\dimen152
+\leftmarginFB=\dimen153
+\parindentFFN=\dimen154
+\FBfnindent=\dimen155
 ))
-(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/units\units.sty
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.st
+y) (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/units\units.sty
 Package: units 1998/08/04 v0.9b Typesetting units
 
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
@@ -130,7 +153,7 @@ LaTeX Font Info:    Trying to load font information for T1+fve on input line 30
 File: t1fve.fd 2004/09/07 scalable font definitions for T1/fve.
 )
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 30.
+(Font)              scaled to size 9.85492pt on input line 30.
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/bera\berasans.sty
 Package: berasans 2004/01/30 (WaS)
@@ -158,8 +181,8 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen148
-\Gin@req@width=\dimen149
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
 y
@@ -180,19 +203,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count190
+\actioncount=\count197
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count191
-\FP@xia=\count192
-\FP@xib=\count193
-\FP@xfa=\count194
-\FP@xfb=\count195
-\FP@rega=\count196
-\FP@regb=\count197
-\FP@regs=\count198
-\FP@times=\count199
+\FP@xs=\count198
+\FP@xia=\count199
+\FP@xib=\count266
+\FP@xfa=\count267
+\FP@xfb=\count268
+\FP@rega=\count269
+\FP@regb=\count270
+\FP@regs=\count271
+\FP@times=\count272
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -211,7 +234,7 @@ Package: fp-pas 1994/08/29
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count266
+\FPseed=\count273
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -228,27 +251,27 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip62
 \LTpre=\skip63
 \LTpost=\skip64
-\LTchunksize=\count267
-\LTcapwidth=\dimen150
+\LTchunksize=\count274
+\LTcapwidth=\dimen158
 \LT@head=\box47
 \LT@firsthead=\box48
 \LT@foot=\box49
 \LT@lastfoot=\box50
-\LT@cols=\count268
-\LT@rows=\count269
-\c@LT@tables=\count270
-\c@LT@chunks=\count271
-\LT@p@ftn=\toks19
+\LT@cols=\count275
+\LT@rows=\count276
+\c@LT@tables=\count277
+\c@LT@chunks=\count278
+\LT@p@ftn=\toks20
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/marvosym\marvosym.st
 y
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 ) (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen151
+\col@sep=\dimen159
 \ar@mcellbox=\box51
-\extrarowheight=\dimen152
-\NC@list=\toks20
+\extrarowheight=\dimen160
+\NC@list=\toks21
 \extratabsurround=\skip65
 \backup@length=\skip66
 \ar@cellbox=\box52
@@ -257,16 +280,16 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 y
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip67
-\multirow@cntb=\count272
+\multirow@cntb=\count279
 \multirow@dima=\skip68
-\bigstrutjot=\dimen153
+\bigstrutjot=\dimen161
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.st
 y
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen154
-\c@nlinenum=\count273
-\TeXr@lab=\toks21
+\rotheadsize=\dimen162
+\c@nlinenum=\count280
+\TeXr@lab=\toks22
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime.st
 y
@@ -275,7 +298,7 @@ Package: datetime 2015/03/20 v2.60 Date Time Package
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.st
 y
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count274
+\etb@tempcnta=\count281
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fmtcount.st
 y
@@ -288,10 +311,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 x
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.t
 ex
-\XKV@toks=\toks22
-\XKV@tempa@toks=\toks23
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
 )
-\XKV@depth=\count275
+\XKV@depth=\count282
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcprefix.st
@@ -301,117 +324,132 @@ Package: fcprefix 2012/09/28
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fcnumparser
 .sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count276
+\fc@digit@counter=\count283
 ))
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen155
+\@emptytoks=\toks25
+\ex@=\dimen163
 )
-\c@padzeroesN=\count277
-\fc@tmpcatcode=\count278
-\@DT@modctr=\count279
-\@ordinalctr=\count280
-\@orgargctr=\count281
-\@strctr=\count282
-\@tmpstrctr=\count283
-\@DT@loopN=\count284
-\@DT@X=\count285
+\c@padzeroesN=\count284
+\fc@tmpcatcode=\count285
+
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/fmtcount\fc-french.d
+ef
+File: fc-french.def 2020/02/24
+)
+\@DT@modctr=\count286
+\@ordinalctr=\count287
+\@orgargctr=\count288
+\@strctr=\count289
+\@tmpstrctr=\count290
+\@DT@loopN=\count291
+\@DT@X=\count292
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/datetime\datetime-de
 faults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count286
-\@month=\count287
-\@year=\count288
-\c@HOUR=\count289
-\c@HOURXII=\count290
-\c@MINUTE=\count291
-\c@TOHOUR=\count292
-\c@TOMINUTE=\count293
-\c@SECOND=\count294
-\currenthour=\count295
-\currentminute=\count296
-\currentsecond=\count297
+\@day=\count293
+\@month=\count294
+\@year=\count295
+\c@HOUR=\count296
+\c@HOURXII=\count297
+\c@MINUTE=\count298
+\c@TOHOUR=\count299
+\c@TOMINUTE=\count300
+\c@SECOND=\count301
+\currenthour=\count302
+\currentminute=\count303
+\currentsecond=\count304
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count298
-\dayofyear=\count299
-\dayofweek=\count300
+
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/datetime\dt-french.d
+ef
+File: dt-french.def 2013/09/10
+LaTeX Info: Redefining \datefrench on input line 91.
+)
+\@dtctr=\count305
+\dayofyear=\count306
+\dayofweek=\count307
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks25
-\dt@b=\toks26
+\dt@a=\toks26
+\dt@b=\toks27
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/numprint\numprint.st
 y
 Package: numprint 2012/08/20 v1.39 Print numbers (HH)
-\c@nprt@mantissa@digitsbefore=\count301
-\c@nprt@mantissa@digitsafter=\count302
-\c@nprt@exponent@digitsbefore=\count303
-\c@nprt@exponent@digitsafter=\count304
+\c@nprt@mantissa@digitsbefore=\count308
+\c@nprt@mantissa@digitsafter=\count309
+\c@nprt@exponent@digitsbefore=\count310
+\c@nprt@exponent@digitsafter=\count311
 \nprt@digitwidth=\skip69
 \nprt@sepwidth=\skip70
 \nprt@decimalwidth=\skip71
 \nprt@blockwidth=\skip72
-\nprt@digittoks=\toks27
-\nprt@pretoks=\toks28
-\nprt@posttoks=\toks29
-\nprt@thisdigit=\count305
-\nprt@curpos=\count306
-\nprt@rndpos=\count307
-\c@nprt@digitsfirstblock=\count308
-\c@nprt@blockcnt=\count309
-\c@nprt@cntprint=\count310
+\nprt@digittoks=\toks28
+\nprt@pretoks=\toks29
+\nprt@posttoks=\toks30
+\nprt@thisdigit=\count312
+\nprt@curpos=\count313
+\nprt@rndpos=\count314
+\c@nprt@digitsfirstblock=\count315
+\c@nprt@blockcnt=\count316
+\c@nprt@cntprint=\count317
  No configuration file `numprint.cfg' found.)
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-
 pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count311
+\l__kernel_color_stack_int=\count318
 \l__pdf_internal_box=\box53
 ) (devis.aux)
 \openout1 = `devis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 29.58032pt and more to the right margin.
+
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* h-part:(L,W,R)=(39.41968pt, 518.66852pt, 39.41968pt)
+* v-part:(T,H,B)=(19.70984pt, 746.49765pt, 78.83936pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-7.86334pt
+* \textwidth=518.66852pt
+* \textheight=746.49765pt
+* \oddsidemargin=-32.85031pt
+* \evensidemargin=-32.85031pt
+* \topmargin=-89.56015pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -421,46 +459,99 @@ LaTeX Font Info:    ... okay on input line 45.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \degres on input line 42.
+LaTeX Info: Redefining \dots on input line 42.
+LaTeX Info: Redefining \up on input line 42.
 
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
 .mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count312
-\scratchdimen=\dimen156
+\scratchcounter=\count319
+\scratchdimen=\dimen164
 \scratchbox=\box54
-\nofMPsegments=\count313
-\nofMParguments=\count314
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count315
-\MPscratchDim=\dimen157
-\MPnumerator=\count316
-\makeMPintoPDFobject=\count317
-\everyMPtoPDFconversion=\toks31
+\nofMPsegments=\count320
+\nofMParguments=\count321
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count322
+\MPscratchDim=\dimen165
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
+\everyMPtoPDFconversion=\toks32
 )
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
 f-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-) 
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 45.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 45.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 45.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 47.
+<logo.png, id=1, 284.5029pt x 100.4553pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 49.
+(pdftex.def)             Requested size: 170.71652pt x 60.27823pt.
+
+Overfull \hbox (1.02834pt too wide) in paragraph at lines 45--55
+ [] 
+ []
+
+LaTeX Font Info:    Font shape `T1/fve/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 90.
+LaTeX Font Info:    Trying to load font information for TS1+fve on input line 9
+2.
+(C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/bera\ts1fve.fd
+File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
+)
+LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 92.
+
+
 AED: lastpage setting LastPage
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 135.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 13.59999pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+LaTeX Font Info:    Faking \texteuro for font family fve
+(Font)              in TS1 encoding on input line 135.
+LaTeX Font Info:    Font shape `T1/fve/m/n' will be
+(Font)              scaled to size 6.8984pt on input line 135.
+
+LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
+(Font)              using `T1/fve/m/n' instead on input line 135.
+
 [1
 
-{C:/Users/Minorzar/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] (devis.aux) 
-) 
+{C:/Users/Minorzar/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
+ (devis.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5790 strings out of 479697
- 81842 string characters out of 2865709
- 412381 words of memory out of 3000000
- 22758 multiletter control sequences out of 15000+200000
- 407433 words of font info for 30 fonts, out of 3000000 for 9000
+ 6755 strings out of 479697
+ 97975 string characters out of 2865709
+ 442747 words of memory out of 3000000
+ 23692 multiletter control sequences out of 15000+200000
+ 422251 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,4n,85p,1011b,102s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
-C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb>
-Output written on devis.pdf (1 page, 7807 bytes).
+ 80i,15n,85p,1077b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+<C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C
+:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb>
+Output written on devis.pdf (1 page, 46828 bytes).
 PDF statistics:
- 11 PDF objects out of 1000 (max. 8388607)
+ 18 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

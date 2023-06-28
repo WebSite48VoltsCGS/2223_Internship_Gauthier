@@ -1,0 +1,35 @@
+\begin{center}
+	\begin{tabular}{ccc}
+%	\hline 
+		\begin{minipage}{5.5cm} \begin{center} \societe \\\footnotesize{ Son ~-~ Lumière \\ Structure ~-~ Vidéo} \end{center} \end{minipage} 
+		&
+		\begin{minipage}[c]{6cm} \begin{center} \includegraphics[width=6cm]{logo.png} \end{center} \end{minipage}
+		&
+		\begin{minipage}{5.5cm}\footnotesize{Web : \web \\ Tel : \tel \\ Mail : \mail} \end{minipage}
+		\\
+%	 \hline
+	\end{tabular}
+\end{center}
+
+%\begin{center}
+%\setcellgapes{10pt} 
+%\begin{tabular}{cc}
+%	\begin{minipage}{10cm}
+%		\begin{tabular}{|l||l|}
+%			\multicolumn{2}{l}{Devis n°\devisNum{} édité le \today} 					\\ \hline 
+%			\multicolumn{2}{|l|}{\textbf{Intitulé :} \nomPrestation} 										\\ \hline \hline
+%			\multicolumn{2}{|l|}{\textbf{Lieu de la prestation :} \lieuPrestation}		\\ \hline \hline 
+%			\textbf{Horaire de livraison :} & \textbf{Horaire de reprise :} \\
+%			\small{\debutPrestation} & \small{\finPrestation} \\ \hline			
+%		\end{tabular}
+% 	\end{minipage}
+% 	& 
+% 	\begin{minipage}{7cm}
+% 		\begin{tabular}{l}
+% 			\textbf{Client : }	\\
+%	 		\ClientNom \\
+%			\ClientAdresse
+%	 	\end{tabular} 		 
+% 	\end{minipage} \\
+%\end{tabular}
+%\end{center}

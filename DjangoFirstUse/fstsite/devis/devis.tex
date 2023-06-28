@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt,french]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lastpage}
@@ -18,13 +18,10 @@
 \usepackage{datetime}
 \usepackage{numprint}
 
-
-
-\def\societe{48Volts}
-\def\adresseM{7 chemin des libellules ~-~ 95800
-\textsc{Courdimanche}}
-\def\adresse21{7 chemin des libellules \\ 95800
-\textsc{Courdimanche}}
+\def\devisNum{20230628-01}
+\def\societe{48 Volts}
+\def\adresseM{7 chemin des libellules ~-~ 95800 \textsc{Courdimanche}}
+\def\adresse2l{7 chemin des libellules \\ 95800 \textsc{Courdimanche}}
 \def\capital{7 000 €}
 \def\gerant{Nicolas \textsc{Papazoglou}}
 \def\tel{06 09 28 15 36}
@@ -35,17 +32,104 @@
 \def\web{www.48-volts.fr}
 
 
-\def\TVA{20}
-\def\TotalHT{0}
-\def\ssTotalHT{0}
-\def\TotalTVA{0}
-\def\part_name{}
-\def\ListeProduits{}
+\geometry{verbose,tmargin=2em,bmargin=8em,lmargin=4em,rmargin=4em}
+\thispagestyle{fancy}
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\societe{}, SARL au capital de \capital ~--~ \adresseM \newline Téléphone : \tel ~--~	RCS \RCS \\ Devis n°\devisNum{} ~--~ Page \thepage\ / \pageref{LastPage}}
 
 \begin{document}
 \normalsize
+\begin{center}
+	\begin{tabular}{ccc}
+%	\hline 
+		\begin{minipage}{5.5cm} \begin{center} \societe \\\footnotesize{ Son ~-~ Lumière \\ Structure ~-~ Vidéo} \end{center} \end{minipage} 
+		&
+		\begin{minipage}[c]{6cm} \begin{center} \includegraphics[width=6cm]{logo.png} \end{center} \end{minipage}
+		&
+		\begin{minipage}{5.5cm}\footnotesize{Web : \web \\ Tel : \tel \\ Mail : \mail} \end{minipage}
+		\\
+%	 \hline
+	\end{tabular}
+\end{center}
+
+%\begin{center}
+%\setcellgapes{10pt} 
+%\begin{tabular}{cc}
+%	\begin{minipage}{10cm}
+%		\begin{tabular}{|l||l|}
+%			\multicolumn{2}{l}{Devis n°\devisNum{} édité le \today} 					\\ \hline 
+%			\multicolumn{2}{|l|}{\textbf{Intitulé :} \nomPrestation} 										\\ \hline \hline
+%			\multicolumn{2}{|l|}{\textbf{Lieu de la prestation :} \lieuPrestation}		\\ \hline \hline 
+%			\textbf{Horaire de livraison :} & \textbf{Horaire de reprise :} \\
+%			\small{\debutPrestation} & \small{\finPrestation} \\ \hline			
+%		\end{tabular}
+% 	\end{minipage}
+% 	& 
+% 	\begin{minipage}{7cm}
+% 		\begin{tabular}{l}
+% 			\textbf{Client : }	\\
+%	 		\ClientNom \\
+%			\ClientAdresse
+%	 	\end{tabular} 		 
+% 	\end{minipage} \\
+%\end{tabular}
+%\end{center}
 Hervé DUPUIS
-20230627-01 to the name of Hervé DUPUIS
+20230628-01 to the name of Hervé DUPUIS
 3 Amplificateur bass Ampli1
 7 Haut{-}Parleur HP1
+\vfill
+\begin{center}
+\begin{tabular}{|cc|}
+	\hline
+	\begin{minipage}{10cm}
+	\begin{center}
+		\begin{tabular}{ccccc}
+		 	\multicolumn{5}{c}{\textbf{RIB}} \\
+		 	\hline
+			Banque & Guichet & N° Compte & Clé & Devise \\
+			30066  & 10139 & 00020525801 & 19 & EUR \\ 
+			\multicolumn{5}{c}{\textbf{IBAN}} \\
+			\hline
+			\multicolumn{5}{c}{FR76 3006 6101 3900 0205 2580 119}
+		\end{tabular}
+	\end{center}
+	\end{minipage} &
+	\begin{minipage}{7cm}
+	\begin{center}
+	\begin{tabular}{c}
+		\textbf{Domiciliation} \\ \hline
+		CIC VAUREAL \\
+		\\
+		\textbf{BIC} \\ \hline
+		CMCIFRPP
+	\end{tabular}
+	\end{center}
+	\end{minipage} \\ \hline \hline
+
+	\begin{minipage}{10cm}
+	\begin{center}	
+	\begin{tabular}{c}
+		\textbf{Domiciliation} \\ \hline
+		CIC VAUREAL \\
+		1 place du Rendez Vous \\
+		95490 VAUREAL
+	\end{tabular}
+	\end{center}
+	\end{minipage} &
+	\begin{minipage}{7cm}
+	\begin{center}
+	\begin{tabular}{c}
+	\textbf{Titulaire du compte} \\ \hline
+	48 Volts \\
+	7 chemin des libellules \\
+	95800 Courdimanche
+	\end{tabular}
+	\end{center}
+	\end{minipage}	 \\
+	\hline			
+\end{tabular}
+\end{center}
 \end{document}
