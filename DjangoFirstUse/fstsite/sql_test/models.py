@@ -98,6 +98,13 @@ class Commande(models.Model):
     def __str__(self):
         return str(self.number) + " " + str(self.article)
 
+class Pack(models.Model):
+    name = models.CharField(max_length=200, default="")
+    lot = models.ManyToManyField(Commande)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return str(self.name)
 
 class Vente(models.Model):
     id_bid = models.CharField(max_length=13, default="")
@@ -115,12 +122,13 @@ class Vente(models.Model):
 
     def generate_id(self):
         formatted_date = timezone.now().strftime('%Y%m%d')
-        formatted_numero = str(Vente.objects.filter(id_bid__startswith=formatted_date).count()).zfill(2)
+        formatted_numero = str(Vente.objects.filter(id_bid__startswith=formatted_date).count()+1).zfill(2)
         self.id_bid = f'{formatted_date}-{formatted_numero}'
         self.save()
 
     def __str__(self):
-        self.generate_id()
+        if self.id_bid == "":
+            self.generate_id()
         client = self.id_client
         return str(self.id_bid) + " to the name of " + str(client.user_name) + " " + str(client.user_lastname)
 

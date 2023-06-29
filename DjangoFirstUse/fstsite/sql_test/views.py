@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.views import generic
+from django.shortcuts import render
 
-from .models import Article, Client, Commande, Vente
+from .models import Article, Client, Commande, Vente, Pack
 
 # Create your views here.
 
@@ -46,3 +47,16 @@ class VenteView(generic.DetailView):
 
     def get_queryset(self):
         return Commande.objects.order_by("cmd_passe")
+
+
+class PackView(generic.DetailView):
+    model = Pack
+    template_name = "sql/pack.html"
+
+    def get_queryset(self):
+        return Commande.objects.order_by("id")
+
+
+def devis(request):
+    ventes = Vente.objects.all()
+    return render(request, 'devis.html', {'ventes': ventes})

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon site</title>
+</head>
+<body>
+    <h1>Mon site</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="text" name="champ1">
+        <input type="text" name="champ2">
+        <select name="vente">
+            {% for vente in ventes %}
+                <option value="{{ vente.id }}">{{ vente.id_bid }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Soumettre</button>
+    </form>
+</body>
+</html>
