@@ -153,3 +153,5 @@ class Vente(models.Model):
                     article = commande.article
                     article.stock -= commande.number
                     article.save()
+
+

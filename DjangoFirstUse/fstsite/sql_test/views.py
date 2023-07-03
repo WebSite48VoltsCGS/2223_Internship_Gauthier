@@ -4,6 +4,14 @@ from django.shortcuts import render
 
 from .models import Article, Client, Commande, Vente, Pack
 
+
+# Macro and variable
+
+prestationName = ""
+prestationLoc = ""
+debPrestation = ""
+finPrestation = ""
+
 # Create your views here.
 
 class IndexView(generic.ListView):
@@ -58,5 +66,12 @@ class PackView(generic.DetailView):
 
 
 def devis(request):
+    global prestationLoc, prestationName, debPrestation, finPrestation
     ventes = Vente.objects.all()
+
+    if request.method == 'POST':
+        prestationName = request.POST.get('nomPrestation')
+        prestationLoc = request.POST.get('lieuPrestation')
+        debPrestation = request.POST.get('debPrestation')
+        finPrestation = request.POST.get('finPrestation')
     return render(request, 'devis.html', {'ventes': ventes})
