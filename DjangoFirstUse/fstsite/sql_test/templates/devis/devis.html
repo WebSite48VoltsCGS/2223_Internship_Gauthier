@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Génération de devis</title>
+    <link rel="stylesheet" href="{% static 'devis/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Génération de devis</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="vente">Id du devis :</label>
+        <select id="vente" onchange="loadCommand()">
+            <option value = ""></option>
+            {% for vente in ventes %}
+                <option value="{{ vente.id }}">{{ vente.id_bid }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="commands">Commandes :</label>
+        <div id="commands">
+
+        </div>
+
+        <script>
+            function loadCommand() {
+                const commandsContainer = document.getElementById('commands');
+                const venteID = document.getElementById('vente').value;
+                commandsContainer.innerHTML = '';
+
+            $.ajax({
+                url: '/devis/',
+                type: 'GET',
+                data: {vente_id: venteID},
+                success: function(response) {
+                        const commandes = response.commandes;
+                        if (commandes) {
+                            for (const commande of commandes) {
+                                const commandDiv = document.createElement('div');
+
+                                const nameSpan = document.createElement('span');
+                                nameSpan.textContent = `${commande.article} `;
+
+                                const input = document.createElement('input');
+                                input.type = 'number';
+                                input.min = 0;
+                                input.max = 100;
+                                input.setAttribute('placeholder', '-%');
+                                input.name = `discount_${commande.id}`;
+
+                                commandDiv.appendChild(nameSpan);
+                                commandDiv.appendChild(input);
+
+                                commandsContainer.appendChild(commandDiv);
+                            }
+                        }
+                        else {
+                        }
+                },
+                error: function(error) {
+                    console.error('Erreur AJAX : ', error);
+                }
+            });
+            }
+        </script>
+        <br>
+        <label for="nomPrestation">Nom prestation :</label>
+        <input type="text" name="nomPrestation">
+        <br>
+        <label for="lieuPrestation">Lieu prestation :</label>
+        <input type="text" name="lieuPrestation">
+        <br>
+        <label for="debPrestation">Début prestation :</label>
+        <input type="text" name="debPrestation">
+        <span class="footnote">(Ce champ est facultatif)</span>
+        <br>
+        <label for="finPrestation">Fin prestation :</label>
+        <input type="text" name="finPrestation">
+        <span class="footnote">(Ce champ est facultatif)</span>
+        <br>
+        <label for="Acompte">Acompte :</label>
+        <input type="number" name="Acompte">
+        <br>
+        <button type="submit">Générer</button>
+    </form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views import generic
 from django.shortcuts import render
 
@@ -67,6 +67,7 @@ class PackView(generic.DetailView):
 
 def devis(request):
     global prestationLoc, prestationName, debPrestation, finPrestation
+
     ventes = Vente.objects.all()
 
     if request.method == 'POST':
@@ -74,4 +75,15 @@ def devis(request):
         prestationLoc = request.POST.get('lieuPrestation')
         debPrestation = request.POST.get('debPrestation')
         finPrestation = request.POST.get('finPrestation')
-    return render(request, 'devis.html', {'ventes': ventes})
+
+    elif request.method == 'GET':
+        vente_id = request.GET.get('vente_id')
+        if vente_id:
+            vente = Vente.objects.get(id=vente_id)
+            commandes = vente.id_commande.all()
+            commandes_data = [{'id': commande.id, 'article': commande.article.product} for commande in
+                              commandes]
+            return JsonResponse({'commandes': commandes_data})
+
+    return render(request, 'devis/devis.html', {'ventes': ventes})
+
