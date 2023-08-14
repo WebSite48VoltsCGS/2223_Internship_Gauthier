@@ -82,7 +82,7 @@ def init_list():
 def V48():
     # gérer l'acquisation de: nomPrestation, lieuPrestation, debutPrestation, finPrestation, ClientNom, ClientAdresse
     address = client.adress
-    name = (client.user_name,client.user_lastname)
+    name = (client.user_name, client.user_lastname)
 
     adderPreamble(noEscape(r"\def\devisNum{" + str(bidNumber) + "}"))
     with open(preamblePath, 'r', encoding='utf-8') as file:

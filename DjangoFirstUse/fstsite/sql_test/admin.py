@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin.widgets import FilteredSelectMultiple
 from django.db import models
-from .models import Article, Client, Commande, Vente, Pack
-
+from .models import Article, Client, Commande, Vente, Pack, Lot
 # Register your models here.
 
 
@@ -79,18 +78,28 @@ class CommandeAdmin(admin.ModelAdmin):
 
 class PackAdmin(admin.ModelAdmin):
     formfield_overrides = {models.ManyToManyField:
-            {'widget': FilteredSelectMultiple(verbose_name='lot', is_stacked=False)}, }
+            {'widget': FilteredSelectMultiple(verbose_name='lots', is_stacked=False)}, }
     fieldsets = [
         (None, {fields: ["name"]}),
-        (None, {fields: ["lot"]}),
+        (None, {fields: ["lots"]}),
         (None, {fields: ["price"]}),
         ]
 
     list_display = ["name"]
     list_filter = ["id", "name"]
 
+class LotAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {fields: ["article"]}),
+        (None, {fields: ["number"]}),
+        ]
+
+    list_display = ["article"]
+    list_filter = ["id", "article"]
+
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Client, ClientAdmin)
 admin.site.register(Vente, VenteAdmin)
 admin.site.register(Commande, CommandeAdmin)
 admin.site.register(Pack, PackAdmin)
+admin.site.register(Lot, LotAdmin)

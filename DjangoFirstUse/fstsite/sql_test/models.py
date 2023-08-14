@@ -98,9 +98,26 @@ class Commande(models.Model):
     def __str__(self):
         return str(self.number) + " " + str(self.article)
 
+class Lot(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    number = models.IntegerField(default=1)
+
+    def __str__(self):
+        return str(self.number) + " " + str(self.article)
+
+    def clean(self):
+        is_positive(self.number)
+        article = self.article
+
+        if article.stock == 0:
+            raise ValidationError("This product is currently unavailable")
+        if article.stock - self.number < 0:
+            raise ValidationError("Not enough product in stock. Their is " + str(article.stock) + " left")
+
+
 class Pack(models.Model):
     name = models.CharField(max_length=200, default="")
-    lot = models.ManyToManyField(Commande)
+    lots = models.ManyToManyField(Lot)
     price = models.FloatField(default=0)
 
     def __str__(self):
@@ -153,5 +170,3 @@ class Vente(models.Model):
                     article = commande.article
                     article.stock -= commande.number
                     article.save()
-
-

@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views import generic
 from django.shortcuts import render
 
-from .models import Article, Client, Commande, Vente, Pack
+from .models import Article, Client, Commande, Vente, Pack, Lot
 
 
 # Macro and variable
@@ -64,6 +64,13 @@ class PackView(generic.DetailView):
     def get_queryset(self):
         return Commande.objects.order_by("id")
 
+class LotView(generic.DetailView):
+    model = Pack
+    template_name = "sql/lot.html"
+
+    def get_queryset(self):
+        return Article.objects.order_by("id")
+
 
 def devis(request):
     global prestationLoc, prestationName, debPrestation, finPrestation
@@ -86,4 +93,3 @@ def devis(request):
             return JsonResponse({'commandes': commandes_data})
 
     return render(request, 'devis/devis.html', {'ventes': ventes})
-
