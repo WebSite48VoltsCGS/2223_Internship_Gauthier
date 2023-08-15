@@ -126,15 +126,17 @@ class Pack(models.Model):
 class Vente(models.Model):
     id_bid = models.CharField(max_length=13, default="")
     id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    id_commande = models.ManyToManyField(Commande)
+    id_commande = models.ManyToManyField(Commande, blank=True)
+    id_pack = models.ManyToManyField(Pack, blank=True)
     billing = models.BooleanField(default=True)
     a_payer = models.BooleanField(default=False)
     cmd_passe = models.DateTimeField(default=timezone.now)
     cmd_payed = models.DateTimeField(null=True, blank=True)
     deb_loc = models.DateTimeField()
-    end_loc = models.DateTimeField()
+    end_loc = models.DateTimeField(null=True, blank=True)
     bid_date = models.DateTimeField(null=True, blank=True)
     got_payed = models.DateTimeField(null=True, blank=True)
+    prev = models.BooleanField(default=False)
 
 
     def generate_id(self):
@@ -153,8 +155,9 @@ class Vente(models.Model):
     def clean(self):
 
         # date correction
-        if self.deb_loc > self.end_loc:
-            raise ValidationError("Impossible to have a renting start date after the end of the renting")
+        if self.end_loc is not None:
+            if self.deb_loc > self.end_loc:
+                raise ValidationError("Impossible to have a renting start date after the end of the renting")
         if self.deb_loc < self.cmd_passe:
             raise ValidationError("Impossible to have a renting before a command has been sent")
         if self.a_payer and (self.got_payed is None):
@@ -162,11 +165,22 @@ class Vente(models.Model):
         if self.got_payed is not None:
             if self.got_payed < self.cmd_passe:
                 raise ValidationError("Impossible to have been payed before the command has been sent")
-        # update of the stock
 
+        # test if buying something
+        if len(self.id_commande.all()) + len(self.id_pack.all()) == 0:
+            raise ValidationError("You cannot buy nothing")
+        # Not working, don't know why. It's trash as hell
+
+        # update of the stock
         if self.a_payer:
-            if not Vente.objects.get(pk=self.pk).a_payer:
-                for commande in self.id_commande.all():
-                    article = commande.article
-                    article.stock -= commande.number
+            self.prev = True
+            self.save()
+            for commande in self.id_commande.all():
+                article = commande.article
+                article.stock -= commande.number
+                article.save()
+            for pack in self.id_pack.all():
+                for lot in pack.lots.all():
+                    article = lot.article
+                    article.stock -= lot.number
                     article.save()

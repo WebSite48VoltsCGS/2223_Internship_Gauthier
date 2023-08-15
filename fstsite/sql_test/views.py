@@ -69,7 +69,7 @@ class LotView(generic.DetailView):
     template_name = "sql/lot.html"
 
     def get_queryset(self):
-        return Article.objects.order_by("id")
+        return Lot.objects.order_by("id")
 
 
 def devis(request):

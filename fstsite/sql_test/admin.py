@@ -49,11 +49,13 @@ class ClientAdmin(admin.ModelAdmin):
 
 
 class VenteAdmin(admin.ModelAdmin):
-    formfield_overrides = {models.ManyToManyField:
-            {'widget': FilteredSelectMultiple(verbose_name='Commandes', is_stacked=False)}, }
+    formfield_overrides = {
+        models.ManyToManyField:
+        {'widget': FilteredSelectMultiple(verbose_name=' ', is_stacked=False)}, }
     fieldsets = [
         (None, {fields: ["id_client"]}),
         (None, {fields: ["id_commande"]}),
+        (None, {fields: ["id_pack"]}),
         (None, {fields: ["billing"]}),
         (None, {fields: ["a_payer"]}),
         (None, {fields: ["cmd_payed"]}),
