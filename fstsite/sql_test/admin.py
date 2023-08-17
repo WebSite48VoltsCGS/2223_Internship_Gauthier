@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin.widgets import FilteredSelectMultiple
 from django.db import models
-from .models import Article, Client, Command
+from .models import Article, Client, Command, Component, KitArticle
 # Register your models here.
 
 
@@ -15,6 +15,21 @@ fields = "fields"
 
 # Class definition
 
+class KitLine(admin.TabularInline):
+    model = KitArticle
+    fields = ["kit"]
+
+class KitAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {fields: ["kit"]}),
+        (None, {fields: ["article"]}),
+        (None, {fields: ["number"]}),]
+
+class ComponentLine(admin.TabularInline):
+    model = Component
+
+class ComponentAdmin(admin.ModelAdmin):
+    inlines = [KitLine]
 
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -26,8 +41,9 @@ class ArticleAdmin(admin.ModelAdmin):
         (None, {fields: ["weight"]}),
         (None, {fields: ["minimal_lot"]}),
     ]
+    inlines = [ComponentLine, ]
 
-    list_display = ["product", "is_multiple", "is_in_stock"]
+    list_display = ["product", "is_in_stock"]
     list_filter = ["product"]
     search_fields = ["product"]
 
@@ -58,3 +74,5 @@ class CommandAdmin(admin.ModelAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Client, ClientAdmin)
 admin.site.register(Command, CommandAdmin)
+admin.site.register(Component, ComponentAdmin)
+admin.site.register(KitArticle, KitAdmin)

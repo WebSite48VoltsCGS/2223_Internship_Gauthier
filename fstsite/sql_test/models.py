@@ -110,12 +110,18 @@ class Client(models.Model):
             raise ValidationError("Cannot have an association name for a person")
 
 class Command(models.Model):
+    billing_id = models.CharField(max_length=200, default="")
     articles = models.ManyToManyField(Article, through='CommandLine')
     is_payed = models.BooleanField(default=False)
-    billing_date = models.DateTimeField(default=timezone.now())
-    paiment_date = models.DateTimeField(default=timezone.now())
+    billing_date = models.DateTimeField(default=timezone.now)
+    paiment_date = models.DateTimeField(default=timezone.now)
+    start_loc = models.DateTimeField()
+    end_loc = models.DateTimeField()
 
-
+    def generate_id(self):
+        formatted_date = timezone.now().strftime('%Y%m%d')
+        formatted_numero = str(Command.objects.filter(billing_id__startswith=formatted_date).count() + 1).zfill(2)
+        self.billing_id = f'{formatted_date}-{formatted_numero}'
 
 
 class CommandLine(models.Model):
