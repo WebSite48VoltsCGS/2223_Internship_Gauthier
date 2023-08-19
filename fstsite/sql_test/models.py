@@ -45,33 +45,35 @@ class Article(models.Model):
         return self.stock > 0
 
     def update_weight(self):
-        w = 0
+        w = self.weight
+        cnt = 0
 
-        if self.is_multiple:
-            for article in self.article.all():
-                w += article.update_weight()
-        else:
+        for article in self.article.all():
+            cnt += 1
+            w += article.update_weight()
+
+        if cnt == 0:
             return self.weight
 
         return w
 
     def clean(self):
+        self.save()
         if self.is_multiple:
             if len(self.article.all()) == 0:
+                self.delete()
                 raise ValidationError("Cannot have no item for a multiple selection !")
-
-        self.weight = self.update_weight()
-        self.save()
+            self.weight = self.update_weight()
+        else:
+            self.save()
+            if len(self.article.all()) != 0:
+                self.delete()
+                raise ValidationError("Cannot be a multiple article without components !")
 
 
 class Component(models.Model):
-    kit = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='kit_components')
-    articles = models.ManyToManyField(Article, through='KitArticle', related_name='article_components')
-
-
-class KitArticle(models.Model):
-    kit = models.ForeignKey(Component, on_delete=models.CASCADE)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    kit = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='parent_article', blank=True, null=True)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='component_article', blank=True, null=True)
     number = models.PositiveIntegerField(default=1)
 
 

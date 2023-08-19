@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin.widgets import FilteredSelectMultiple
 from django.db import models
-from .models import Article, Client, Command, Component, KitArticle
+from .models import Article, Client, Command, Component
 # Register your models here.
 
 
@@ -15,21 +15,18 @@ fields = "fields"
 
 # Class definition
 
-class KitLine(admin.TabularInline):
-    model = KitArticle
-    fields = ["kit"]
-
-class KitAdmin(admin.ModelAdmin):
+class ComponentAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {fields: ["kit"]}),
         (None, {fields: ["article"]}),
-        (None, {fields: ["number"]}),]
+        (None, {fields: ["number"]}), ]
+
 
 class ComponentLine(admin.TabularInline):
     model = Component
-
-class ComponentAdmin(admin.ModelAdmin):
-    inlines = [KitLine]
+    fk_name = "kit"
+    extra = 0
+    fields = ["article", "number"]
 
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -75,4 +72,3 @@ admin.site.register(Article, ArticleAdmin)
 admin.site.register(Client, ClientAdmin)
 admin.site.register(Command, CommandAdmin)
 admin.site.register(Component, ComponentAdmin)
-admin.site.register(KitArticle, KitAdmin)
