@@ -23,10 +23,11 @@ Pack = pylatex.Package
 pageStyle = pylatex.PageStyle
 noEscape = pylatex.NoEscape
 
-Clients = models.Client
-Articles = models.Article
-Ventes = models.Vente
-Commandes = models.Commande
+Client = models.Client
+Article = models.Article
+Command = models.Command
+Component = models.Component
+CommandLine = models.CommandLine
 
 packs = ["babel", "units", "bera", "graphicx", "fancyhdr", "fp", "longtable", "marvosym", "array", "multirow",
          "makecell", "datetime", "numprint"]
@@ -49,10 +50,6 @@ for pack in packs:
     bid.packages.append(Pack(pack))
 
 
-TVA = 20
-TotalHT = 0
-ssTotalHT = 0
-TotalTVA = 0
 produits = []       # list of list, 0 -> Article.product + Article.model
                     #               1 -> Commande.number
                     #               2 -> Article.buying_price
@@ -60,31 +57,41 @@ produits = []       # list of list, 0 -> Article.product + Article.model
                     #               4 -> Commande.coeff default = 1
                     #               5 -> Total
 
-client = Clients.objects.get(user_name="Hervé")
-vente = Ventes.objects.get(id_client=client.id)
+client = Client.objects.get(user_name="Hervé")
+command = Command.objects.get(client=client.id)
 
-bidNumber = vente.id_bid
+bidNumber = command.billing_id
 
 
-cmdBash = r"pdflatex D:\Git\Projet\2223_Internship_Gauthier\DjangoFirstUse\fstsite\devis\devis.tex"
+cmdBash = r"pdflatex D:\Git\Projet\2223_Internship_Gauthier\fstsite\devis\devis.tex"
 
 # Function definition
 
 
 def init_list():
-    global produits
-    for commands in vente.id_commande.all():
-        produit = [commands.article.product + " " + commands.article.model + " " + commands.article.marque,
+    for commands in CommandLine.objects.filter(command=command.id):
+        produit = [f'{commands.article.product} {commands.article.brand} {commands.article.denomination}',
                    commands.number, commands.article.buying_price, 0, 1, 0]
         produits.append(produit)
 
 
 def V48():
     # gérer l'acquisation de: nomPrestation, lieuPrestation, debutPrestation, finPrestation, ClientNom, ClientAdresse
+    TotalTVA, TotalHT, ssTotalHT, TVA = calcul()
+
+    deposit = None
     address = client.adress
     name = (client.user_name, client.user_lastname)
 
-    adderPreamble(noEscape(r"\def\devisNum{" + str(bidNumber) + "}"))
+    adderPreamble(noEscape(f"\\def\\devisNum{{{bidNumber}}}"))
+    adderPreamble(noEscape(f"\\def\\total{{{TotalTVA}}}"))
+    if deposit is None:
+        adderPreamble(noEscape(f"\\def\\deposit{{0}}"))
+        adderPreamble(noEscape(f"\\def\\totalLeft{{{TotalTVA}}}"))
+    else:
+        adderPreamble(noEscape(f"\\def\\total{{{deposit}}}"))
+        adderPreamble(noEscape(f"\\def\\totalLeft{{{TotalTVA - deposit}}}"))
+
     with open(preamblePath, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
@@ -109,17 +116,20 @@ def header():
 
 
 def calcul():
-    global ssTotalHT, TotalHT, produits
+    init_list()
+    ssTotalHT = TotalHT = 0
+    TVA = 20
     for produit in produits:
         total = produit[1]*produit[2]*produit[4]*(1-produit[3]/100)
         ssTotalHT += total
         TotalHT += total
         produit[5] = total
+    TotalTVA = (1+TVA/100)*TotalHT
+    return TotalTVA, TotalHT, ssTotalHT, TVA
 
 
 def createTable():
-    global produits, ssTotalHT, TotalHT
-
+    pass
 def writing():
     # Preamble
     V48()
@@ -129,30 +139,28 @@ def writing():
 
     # Bid
 
-    init_list()
-    calcul()
     bid.append(noEscape(client))
-    bid.append(noEscape(vente))
-    for cmd in vente.id_commande.all():
-        adder(cmd)
+    bid.append(noEscape(f'{command}\n'))
+    for cmd in command.articles.all():
+        adder(noEscape(f'{cmd}\n'))
 
     # Bank
     bank()
 
     # Compilation
-    bid.generate_tex(filepath=r"D:\Git\Projet\2223_Internship_Gauthier\DjangoFirstUse\fstsite\devis\devis")
+    bid.generate_tex(filepath=r"D:\Git\Projet\2223_Internship_Gauthier\fstsite\devis\devis")
 
 
 
     process = subprocess.Popen(cmdBash, shell=True,
-                            cwd=r"D:\Git\Projet\2223_Internship_Gauthier\DjangoFirstUse\fstsite\devis",
+                            cwd=r"D:\Git\Projet\2223_Internship_Gauthier\fstsite\devis",
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     process.communicate()
 
 
     process = subprocess.Popen(cmdBash, shell=True,
-                            cwd=r"D:\Git\Projet\2223_Internship_Gauthier\DjangoFirstUse\fstsite\devis",
+                            cwd=r"D:\Git\Projet\2223_Internship_Gauthier\fstsite\devis",
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     process.communicate()
 
-# writing()
+writing()

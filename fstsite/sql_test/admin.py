@@ -1,7 +1,5 @@
 from django.contrib import admin
-from django.contrib.admin.widgets import FilteredSelectMultiple
-from django.db import models
-from .models import Article, Client, Commande, Vente, Pack, Lot
+from .models import Article, Client, Command, Component, CommandLine
 # Register your models here.
 
 
@@ -15,21 +13,40 @@ fields = "fields"
 
 # Class definition
 
+class ComponentAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {fields: ["kit"]}),
+        (None, {fields: ["article"]}),
+        (None, {fields: ["number"]}), ]
+
+
+class ComponentLine(admin.TabularInline):
+    model = Component
+    fk_name = "kit"
+    extra = 0
+    fields = ["article", "number"]
 
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {fields: ["product"]}),
-        (None, {fields: ["model"]}),
+        (None, {fields: ["brand"]}),
+        (None, {fields: ["category"]}),
+        (None, {fields: ["sub_category"]}),
+        (None, {fields: ["denomination"]}),
+        (None, {fields: ["description"]}),
+        (None, {fields: ["sell_or_loc"]}),
+        (None, {fields: ["is_multiple"]}),
         (None, {fields: ["buying_price"]}),
         (None, {fields: ["stock"]}),
         (None, {fields: ["location_price"]}),
         (None, {fields: ["weight"]}),
         (None, {fields: ["minimal_lot"]}),
     ]
+    inlines = [ComponentLine, ]
 
-    list_display = ["product", "model", "is_in_stock"]
-    list_filter = ["product", "model"]
-    search_fields = ["product"]
+    list_display = ["product", "brand", "is_in_stock"]
+    list_filter = ["product", "brand", "category", "sub_category"]
+    search_fields = ["product", "brand", "category", "sub_category"]
 
 
 class ClientAdmin(admin.ModelAdmin):
@@ -41,65 +58,46 @@ class ClientAdmin(admin.ModelAdmin):
         (None, {fields: ["user_lastname"]}),
         (None, {fields: ["adress"]}),
         (None, {fields: ["email"]}),
+        (None, {fields: ["phone"]}),
     ]
 
     list_display = ["name", "user_name", "user_lastname", "email"]
     list_filter = ["name", "user_lastname"]
-    search_fields = ["name", "user_lastname"]
+    search_fields = ["name", "user_lastname", "email", "phone"]
 
-
-class VenteAdmin(admin.ModelAdmin):
-    formfield_overrides = {models.ManyToManyField:
-            {'widget': FilteredSelectMultiple(verbose_name='Commandes', is_stacked=False)}, }
+class CommandLineAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {fields: ["id_client"]}),
-        (None, {fields: ["id_commande"]}),
-        (None, {fields: ["billing"]}),
-        (None, {fields: ["a_payer"]}),
-        (None, {fields: ["cmd_payed"]}),
-        (None, {fields: ["deb_loc"]}),
-        (None, {fields: ["end_loc"]}),
-        (None, {fields: ["bid_date"]}),
-        (None, {fields: ["got_payed"]}),
-    ]
-
-    list_display = ["id_bid", "id_client", "cmd_passe", "billing", "a_payer", "cmd_payed", "deb_loc", "end_loc"]
-    list_filter = ["id_bid"]
-
-
-class CommandeAdmin(admin.ModelAdmin):
-    fieldsets = [
+        (None, {fields: ["command"]}),
         (None, {fields: ["article"]}),
-        (None, {fields: ["number"]}),
-    ]
+        (None, {fields: ["number"]}), ]
 
-    list_display = ["article", "number"]
-    list_filter = ["article"]
+    list_display = ["command", "article"]
+    list_filter = ["command"]
 
-class PackAdmin(admin.ModelAdmin):
-    formfield_overrides = {models.ManyToManyField:
-            {'widget': FilteredSelectMultiple(verbose_name='lots', is_stacked=False)}, }
+class CommandLineFun(admin.TabularInline):
+    model = CommandLine
+    fk_name = "command"
+    extra = 0
+    fields = ["command", "article", "number"]
+
+
+class CommandAdmin(admin.ModelAdmin):
+    inlines = [CommandLineFun, ]
     fieldsets = [
-        (None, {fields: ["name"]}),
-        (None, {fields: ["lots"]}),
-        (None, {fields: ["price"]}),
-        ]
+        (None, {fields: ["billing_date"]}),
+        (None, {fields: ["client"]}),
+        (None, {fields: ["is_payed"]}),
+        (None, {fields: ["paiment_date"]}),
+        (None, {fields: ["loc_place"]}),
+        (None, {fields: ["start_loc"]}),
+        (None, {fields: ["end_loc"]}), ]
 
-    list_display = ["name"]
-    list_filter = ["id", "name"]
+    list_display = ["billing_id", "client"]
+    list_filter = ["billing_id", "client"]
 
-class LotAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None, {fields: ["article"]}),
-        (None, {fields: ["number"]}),
-        ]
 
-    list_display = ["article"]
-    list_filter = ["id", "article"]
-
-admin.site.register(Article, ArticleAdmin)
 admin.site.register(Client, ClientAdmin)
-admin.site.register(Vente, VenteAdmin)
-admin.site.register(Commande, CommandeAdmin)
-admin.site.register(Pack, PackAdmin)
-admin.site.register(Lot, LotAdmin)
+admin.site.register(Article, ArticleAdmin)
+admin.site.register(Component, ComponentAdmin)
+admin.site.register(Command, CommandAdmin)
+admin.site.register(CommandLine, CommandLineAdmin)

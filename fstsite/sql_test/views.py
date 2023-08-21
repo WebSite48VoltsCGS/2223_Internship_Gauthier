@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views import generic
 from django.shortcuts import render
 
-from .models import Article, Client, Commande, Vente, Pack, Lot
+from .models import Article, Client, Command
 
 
 # Macro and variable
@@ -42,40 +42,16 @@ class ClientView(generic.DetailView):
         return Client.objects.order_by("id")
     
 class CommandeView(generic.DetailView):
-    model = Commande
+    model = Command
     template_name = "sql/commande.html"
 
     def get_queryset(self):
-        return Commande.objects.order_by("article")
-
-
-class VenteView(generic.DetailView):
-    model = Vente
-    template_name = "sql/vente.html"
-
-    def get_queryset(self):
-        return Commande.objects.order_by("cmd_passe")
-
-
-class PackView(generic.DetailView):
-    model = Pack
-    template_name = "sql/pack.html"
-
-    def get_queryset(self):
-        return Commande.objects.order_by("id")
-
-class LotView(generic.DetailView):
-    model = Pack
-    template_name = "sql/lot.html"
-
-    def get_queryset(self):
-        return Article.objects.order_by("id")
-
+        return Command.objects.order_by("article")
 
 def devis(request):
     global prestationLoc, prestationName, debPrestation, finPrestation
 
-    ventes = Vente.objects.all()
+    command = Command.objects.all()
 
     if request.method == 'POST':
         prestationName = request.POST.get('nomPrestation')
@@ -84,12 +60,10 @@ def devis(request):
         finPrestation = request.POST.get('finPrestation')
 
     elif request.method == 'GET':
-        vente_id = request.GET.get('vente_id')
-        if vente_id:
-            vente = Vente.objects.get(id=vente_id)
-            commandes = vente.id_commande.all()
-            commandes_data = [{'id': commande.id, 'article': commande.article.product} for commande in
-                              commandes]
-            return JsonResponse({'commandes': commandes_data})
+        comm_id = request.GET.get('billing_id')
+        if comm_id:
+            articles = Article.objects.filter(commandline__command__billing_id=comm_id)
+            articles_data = [{'name': article.product, 'value': article.is_multiple} for article in articles]
+            return JsonResponse({'articles': articles_data})
 
-    return render(request, 'devis/devis.html', {'ventes': ventes})
+    return render(request, 'devis/devis.html', {'commande': command})
