@@ -3,6 +3,8 @@ from django.db.models import UniqueConstraint
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+from django.dispatch import receiver
+from django.db.models.signals import post_save, pre_save
 
 
 # Create your models here.
@@ -15,8 +17,11 @@ from django.utils import timezone
 
 
 def is_positive(value):
-    if value <= 0:
+    if value < 0:
         raise ValidationError("Cannot be 0 or a negative value")
+
+def is_empty(tab):
+    return not tab
 
 
 # Class definition
@@ -24,14 +29,20 @@ def is_positive(value):
 
 class Article(models.Model):
     product = models.CharField(max_length=200, default="")
+    brand = models.CharField(max_length=200, default="")
+    category = models.CharField(max_length=200, default="")
+    sub_category = models.CharField(max_length=200, default="")
+    denomination = models.CharField(max_length=200, default="")
+    description = models.TextField(max_length=200, default="", blank=True, null=True)
+    sell_or_loc = models.BooleanField(default=False)
     is_multiple = models.BooleanField(default=False)
     article = models.ManyToManyField('self', through='Component', blank=True, symmetrical=False,
                                      related_name='related_components')
-    buying_price = models.FloatField(validators=[is_positive], default=0)
+    buying_price = models.FloatField(validators=[is_positive], default=1)
     stock = models.IntegerField(validators=[is_positive], default=0)
-    location_price = models.FloatField(validators=[is_positive], default=0)
-    weight = models.FloatField(validators=[is_positive], default=0)
-    minimal_lot = models.IntegerField(validators=[is_positive], default=0)
+    location_price = models.FloatField(validators=[is_positive], default=1)
+    weight = models.FloatField(validators=[is_positive], default=1)
+    minimal_lot = models.IntegerField(validators=[is_positive], default=1)
 
     def __str__(self):
         return str(self.product)
@@ -46,35 +57,39 @@ class Article(models.Model):
 
     def update_weight(self):
         w = self.weight
-        cnt = 0
+        weighted_sum = 0
+        lst_component = Component.objects.filter(kit_id=self.id)
+        for component in lst_component:
+            weighted_sum += component.article.update_weight() * component.number
 
-        for article in self.article.all():
-            cnt += 1
-            w += article.update_weight()
-
-        if cnt == 0:
-            return self.weight
-
+        if weighted_sum != 0:
+            return weighted_sum
         return w
 
-    def clean(self):
-        self.save()
-        if self.is_multiple:
-            if len(self.article.all()) == 0:
-                self.delete()
-                raise ValidationError("Cannot have no item for a multiple selection !")
-            self.weight = self.update_weight()
-        else:
-            self.save()
-            if len(self.article.all()) != 0:
-                self.delete()
-                raise ValidationError("Cannot be a multiple article without components !")
+
+@receiver(post_save, sender=Article)
+def post_save_article(sender, instance, **kwargs):
+    if instance.weight != instance.update_weight():
+        instance.weight = instance.update_weight()
+        instance.save()
+    if is_empty(instance.article.all()):
+        if instance.is_multiple:
+            instance.is_multiple = False
+            instance.save()
+    else:
+        if not instance.is_multiple:
+            instance.is_multiple = True
+            instance.save()
 
 
 class Component(models.Model):
     kit = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='parent_article', blank=True, null=True)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='component_article', blank=True, null=True)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='component_article', blank=True,
+                                null=True)
     number = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f'Article {self.article} from {self.kit}'
 
 
 class Client(models.Model):
@@ -85,21 +100,23 @@ class Client(models.Model):
     user_name = models.CharField(max_length=200, default="", blank=True)
     user_lastname = models.CharField(max_length=200, default="", blank=True)
     email = models.EmailField(default="", blank=True, unique=True)
+    phone = models.CharField(max_length=10, default="")
 
     class Meta:
         constraints = [
             UniqueConstraint(fields=['email'], name='email'),
             UniqueConstraint(fields=['siret'], name='siret'),
             UniqueConstraint(fields=['name'], name='name'),
+            UniqueConstraint(fields=['phone'], name='phone')
         ]
 
     def __str__(self):
         if self.asso:
-            return str(self.name) + " SIRET number " + str(self.siret)
+            return f'{self.name} SIRET number {self.siret}'
         elif self.user_lastname is None:
-            return str(self.user_name)
+            return f'{self.user_name}'
         else:
-            return str(self.user_name) + " " + str(self.user_lastname)
+            return f'{self.user_name} {self.user_lastname}'
 
 
     def clean(self):
@@ -113,20 +130,34 @@ class Client(models.Model):
 
 class Command(models.Model):
     billing_id = models.CharField(max_length=200, default="")
+    client = models.ForeignKey(Client, on_delete=models.CASCADE, blank=True, null=True)
     articles = models.ManyToManyField(Article, through='CommandLine')
     is_payed = models.BooleanField(default=False)
     billing_date = models.DateTimeField(default=timezone.now)
-    paiment_date = models.DateTimeField(default=timezone.now)
+    paiment_date = models.DateTimeField(blank=True)
+    loc_place = models.CharField(max_length=200, default="")
     start_loc = models.DateTimeField()
     end_loc = models.DateTimeField()
 
-    def generate_id(self):
+    @staticmethod
+    def generate_id():
         formatted_date = timezone.now().strftime('%Y%m%d')
-        formatted_numero = str(Command.objects.filter(billing_id__startswith=formatted_date).count() + 1).zfill(2)
-        self.billing_id = f'{formatted_date}-{formatted_numero}'
+        formatted_numero = str(Command.objects.filter(billing_id__startswith=formatted_date).count()+1).zfill(2)
+        return f'{formatted_date}-{formatted_numero}'
+
+    def __str__(self):
+        return f'Commande {self.billing_id} from {self.client}'
+
+@receiver(pre_save, sender=Command)
+def pre_save_command(sender, instance, **kwargs):
+    if instance.billing_id == "":
+        instance.billing_id = instance.generate_id()
 
 
 class CommandLine(models.Model):
     command = models.ForeignKey(Command, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     number = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f'Article {self.article} from {self.command}'

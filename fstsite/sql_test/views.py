@@ -60,10 +60,10 @@ def devis(request):
         finPrestation = request.POST.get('finPrestation')
 
     elif request.method == 'GET':
-        comm_id = request.GET.get('comm_id')
+        comm_id = request.GET.get('billing_id')
         if comm_id:
-            comm = Command.objects.get(id=comm_id)
-            commandes_data = [{'id': comm.id, 'article': comm.article}]
-            return JsonResponse({'commandes': commandes_data})
+            articles = Article.objects.filter(commandline__command__billing_id=comm_id)
+            articles_data = [{'name': article.product, 'value': article.is_multiple} for article in articles]
+            return JsonResponse({'articles': articles_data})
 
-    return render(request, 'devis/devis.html', {'ventes': ventes})
+    return render(request, 'devis/devis.html', {'commande': command})

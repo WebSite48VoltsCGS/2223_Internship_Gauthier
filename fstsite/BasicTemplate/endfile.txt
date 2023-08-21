@@ -1,5 +1,14 @@
 \vfill
 \begin{center}
+\begin{tabular}{|crl|}
+	\hline
+	\multicolumn{3}{|c|}{\textbf{Conditions de commande et de règlement}} \\
+	\multicolumn{3}{|c|}{Devis valable 30 jours à renvoyer daté, signé, avec la mention "bon pour accord"} \\
+	Acompte & \textbf{\deposit \EUR} & \\
+	Solde &	\textbf{\total \EUR} & à réception de la facture \\
+	Total (TTC) & \textbf{\totalLeft \EUR} & \\
+	\hline
+\end{tabular}
 \begin{tabular}{|cc|}
 	\hline
 	\begin{minipage}{10cm}
