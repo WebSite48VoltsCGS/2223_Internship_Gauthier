@@ -1,9 +1,9 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 
 import sql_test.models as sqlm
 
 
-class ComponentSerializer(ModelSerializer):
+class ComponentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = sqlm.Component
@@ -11,7 +11,14 @@ class ComponentSerializer(ModelSerializer):
                   'article',
                   'number']
 
-class ArticleSerializer(ModelSerializer):
+    def validate(self, data):
+        if sqlm.Component.objects.filter(article=data['article'], kit=data['kit']).exists():
+            raise serializers.ValidationError("Cannot have the same item twice in the same pack.")
+        return data
+
+class ArticleSerializer(serializers.ModelSerializer):
+
+    #article = serializers.SerializerMethodField()
 
     class Meta:
         model = sqlm.Article
@@ -30,7 +37,9 @@ class ArticleSerializer(ModelSerializer):
                   'weight',
                   'minimal_lot', ]
 
-class ClientSerializer(ModelSerializer):
+
+
+class ClientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = sqlm.Client
@@ -42,3 +51,30 @@ class ClientSerializer(ModelSerializer):
                   'user_lastname',
                   'email',
                   'phone', ]
+
+class CommandSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = sqlm.Command
+        fields = ['billing_id',
+                  'client',
+                  'articles',
+                  'is_payed',
+                  'billing_date',
+                  'paiment_date',
+                  'loc_place',
+                  'start_loc',
+                  'end_loc', ]
+
+class CommandLineSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = sqlm.CommandLine
+        fields = ['command',
+                  'article',
+                  'number']
+
+    def validate(self, data):
+        if sqlm.CommandLine.objects.filter(article=data['article'], kit=data['kit']).exists():
+            raise serializers.ValidationError("Cannot have the same item twice in the same pack.")
+        return data

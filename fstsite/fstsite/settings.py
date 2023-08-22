@@ -27,12 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.56.1', '0.0.0.0']
 
+CORS_ALLOW_ORIGINS = [r'chrome-extension://eelcnbccaccipfolokglfhhmapdchbfg/dist/index.html']
+
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
     'sql_test.apps.SqlTestConfig',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

@@ -23,10 +23,15 @@ import API.view as apiv
 router = routers.SimpleRouter()
 
 router.register('article', apiv.ArticleViewset, basename='article')
+router.register('admin/article', apiv.AdminArticleViewSet, basename='admin-article')
 router.register('component', apiv.ComponentViewset, basename='component')
+router.register('admin/component', apiv.AdminComponentViewSet, basename='admin-component')
 router.register('client', apiv.ClientViewset, basename='client')
-# router.register('component', apiv.ComponentViewset, basename='component')
-# router.register('component', apiv.ComponentViewset, basename='component')
+router.register('admin/client', apiv.AdminClientViewSet, basename='admin-client')
+router.register('command', apiv.CommandViewset, basename='command')
+router.register('admin/command', apiv.AdminCommandViewSet, basename='admin-command')
+router.register('command-line', apiv.CommandLineViewset, basename='command-line')
+router.register('admin/command-line', apiv.AdminCommandLineViewSet, basename='admin-command-line')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
