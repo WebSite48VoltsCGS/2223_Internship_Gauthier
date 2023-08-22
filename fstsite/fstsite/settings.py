@@ -25,17 +25,12 @@ SECRET_KEY = 'django-insecure-72#-d&rlhw9ah+bou#6(y+x#tlikvai!57pmwj)e=swkm+ggox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.56.1', '0.0.0.0']
-
-CORS_ALLOW_ORIGINS = [r'chrome-extension://eelcnbccaccipfolokglfhhmapdchbfg/dist/index.html']
-
-
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
-    'sql_test.apps.SqlTestConfig',
     'corsheaders',
+    'sql_test.apps.SqlTestConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+ALL0WED_HOSTS = ['*', '192.168.56.1']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

@@ -12,6 +12,13 @@ django.setup()
 
 from sql_test import models
 
+# TODO
+
+# Change the function calcul which is basically ok but not fantastic given the changes in the database.
+# Maybe that the tabular "produits" will also be modified to be more precise with what the bid must look like.
+
+# Finally get the work done with the value that must be GET from devis.html, once that's done, the script
+# should be almost finished.
 
 
 # Macros and variables definition
@@ -43,7 +50,7 @@ adderPreamble = bid.preamble.append
 preamblePath = r"BasicTemplate\preamble.txt"
 endPath = r"BasicTemplate\endfile.txt"
 headerPath = r"BasicTemplate\introdoc.txt"
-
+tabularPath = r"BasicTemplate\tabular.txt"
 
 
 for pack in packs:
@@ -77,20 +84,11 @@ def init_list():
 
 def V48():
     # gérer l'acquisation de: nomPrestation, lieuPrestation, debutPrestation, finPrestation, ClientNom, ClientAdresse
-    TotalTVA, TotalHT, ssTotalHT, TVA = calcul()
-
-    deposit = None
+    # et les rajouter dans le doc
     address = client.adress
     name = (client.user_name, client.user_lastname)
 
     adderPreamble(noEscape(f"\\def\\devisNum{{{bidNumber}}}"))
-    adderPreamble(noEscape(f"\\def\\total{{{TotalTVA}}}"))
-    if deposit is None:
-        adderPreamble(noEscape(f"\\def\\deposit{{0}}"))
-        adderPreamble(noEscape(f"\\def\\totalLeft{{{TotalTVA}}}"))
-    else:
-        adderPreamble(noEscape(f"\\def\\total{{{deposit}}}"))
-        adderPreamble(noEscape(f"\\def\\totalLeft{{{TotalTVA - deposit}}}"))
 
     with open(preamblePath, 'r', encoding='utf-8') as file:
         lines = file.readlines()
@@ -124,13 +122,44 @@ def calcul():
         ssTotalHT += total
         TotalHT += total
         produit[5] = total
-    TotalTVA = (1+TVA/100)*TotalHT
-    return TotalTVA, TotalHT, ssTotalHT, TVA
+
+    TotalTVA = TVA/100*TotalHT
+    Total = TotalHT + TotalTVA
+    return produits, TotalTVA, TotalHT, ssTotalHT, TVA
 
 
-def createTable():
-    pass
+def createTable(produits_final):
+    bol = 1
+    if bol:
+        pass
+    else:
+        with open(tabularPath, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+
+        for line in lines:
+            if '%' in line:
+                for produit in produits_final:
+                    adder(noEscape(
+                        f"\\text{{{produit[0]}}} & {produit[1]} & {produit[2]} \EUR & {produit[3]}"
+                        f" \% & {produit[4]} & {produit[5]} \EUR \\\\"))
+
+                adder(noEscape(f"\hline \hline"))
+                adder(noEscape(r"Total HT & & & & & \totalHT \\"))
+                adder(noEscape(r"Total TVA (\TVA) & & & & & \totalTVA \\"))
+
+                adder(noEscape(r"\hline \hline"))
+                adder(noEscape(r"\textbf{Total TTC} & & & & & \\total \\\\"))
+
+            adder(noEscape(str(line.replace('\n', "", 1))))
+
+
+
+
+
 def writing():
+
+    produits_final, TotalTVA, TotalHT, ssTotalHT, TVA = calcul()
+
     # Preamble
     V48()
 
@@ -138,6 +167,8 @@ def writing():
     header()
 
     # Bid
+    createTable(produits_final)
+
 
     bid.append(noEscape(client))
     bid.append(noEscape(f'{command}\n'))
@@ -163,4 +194,4 @@ def writing():
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     process.communicate()
 
-writing()
+# writing()
