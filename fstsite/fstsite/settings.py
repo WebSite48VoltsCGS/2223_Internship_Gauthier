@@ -25,13 +25,14 @@ SECRET_KEY = 'django-insecure-72#-d&rlhw9ah+bou#6(y+x#tlikvai!57pmwj)e=swkm+ggox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.56.1', '0.0.0.0']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    "sql_test.apps.SqlTestConfig",
+    'rest_framework',
+    'sql_test.apps.SqlTestConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

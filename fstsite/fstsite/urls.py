@@ -16,8 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework import routers
+
+import API.view as apiv
+
+router = routers.SimpleRouter()
+
+router.register('article', apiv.ArticleViewset, basename='article')
+router.register('component', apiv.ComponentViewset, basename='component')
+router.register('client', apiv.ClientViewset, basename='client')
+# router.register('component', apiv.ComponentViewset, basename='component')
+# router.register('component', apiv.ComponentViewset, basename='component')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include(router.urls)),
+
+
     path("devis/", include("sql_test.urls")),
 ]
