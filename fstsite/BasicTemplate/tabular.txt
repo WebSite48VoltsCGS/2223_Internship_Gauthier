@@ -1,0 +1,9 @@
+\textnormal{\DevisDescr}
+\begin{center}
+	\begin{longtable}{|p{7.8cm}|r|r|r|r|r|}
+		\hline \textbf{Désignation} & \textbf{Qté} & \textbf{P.U. HT (\EUR)} & \textbf{Remise} & \textbf{Coeff} & \textbf{Montant (\EUR)}	\\ \hline \endhead
+		\hline \hline
+%
+	\end{longtable}
+\end{center}
+\vfill
