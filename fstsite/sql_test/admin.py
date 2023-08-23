@@ -46,7 +46,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     list_display = ["product", "brand", "is_in_stock"]
     list_filter = ["product", "brand", "category", "sub_category"]
-    search_fields = ["product", "brand", "category", "sub_category"]
+    search_fields = ["product", "internal_id", "brand", "category", "sub_category"]
 
 
 class ClientAdmin(admin.ModelAdmin):

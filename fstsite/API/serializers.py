@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework.response import Response
 
 import sql_test.models as sqlm
 
@@ -12,17 +13,21 @@ class ComponentSerializer(serializers.ModelSerializer):
                   'number']
 
     def validate(self, data):
-        if sqlm.Component.objects.filter(article=data['article'], kit=data['kit']).exists():
-            raise serializers.ValidationError("Cannot have the same item twice in the same pack.")
-        return data
+        try:
+            if len(sqlm.Component.objects.filter(article=data['article'], kit=data['kit'])) > 1:
+                raise serializers.ValidationError("Cannot have the same item twice in the same pack.")
+            return data
+        except _:
+            return data
 
 class ArticleSerializer(serializers.ModelSerializer):
 
-    #article = serializers.SerializerMethodField()
+    article = serializers.SerializerMethodField()
 
     class Meta:
         model = sqlm.Article
-        fields = ['product',
+        fields = ['internal_id',
+                  'product',
                   'brand',
                   'category',
                   'sub_category',
@@ -36,6 +41,13 @@ class ArticleSerializer(serializers.ModelSerializer):
                   'location_price',
                   'weight',
                   'minimal_lot', ]
+
+    def get_article(self, instance):
+
+        queryset = sqlm.Component.objects.filter(kit=instance.id)
+        serializer = ComponentSerializer(queryset, many=True)
+        return serializer.data
+
 
 
 
@@ -54,6 +66,12 @@ class ClientSerializer(serializers.ModelSerializer):
 
 class CommandSerializer(serializers.ModelSerializer):
 
+    billing_date = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
+    paiment_date = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
+    start_loc = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
+    end_loc = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
+    articles = serializers.SerializerMethodField()
+
     class Meta:
         model = sqlm.Command
         fields = ['billing_id',
@@ -66,6 +84,12 @@ class CommandSerializer(serializers.ModelSerializer):
                   'start_loc',
                   'end_loc', ]
 
+    def get_articles(self, instance):
+
+        queryset = sqlm.CommandLine.objects.filter(command=instance.id)
+        serializer = CommandLineSerializer(queryset, many=True)
+        return serializer.data
+
 class CommandLineSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -75,6 +99,6 @@ class CommandLineSerializer(serializers.ModelSerializer):
                   'number']
 
     def validate(self, data):
-        if sqlm.CommandLine.objects.filter(article=data['article'], kit=data['kit']).exists():
-            raise serializers.ValidationError("Cannot have the same item twice in the same pack.")
+        if sqlm.CommandLine.objects.filter(article=data['article'], command=data['command']).exists():
+            raise serializers.ValidationError("Cannot have the same item twice in the same bid.")
         return data

@@ -28,6 +28,7 @@ def is_empty(tab):
 
 
 class Article(models.Model):
+    internal_id = models.CharField(max_length=5, default="00000")
     product = models.CharField(max_length=200, default="")
     brand = models.CharField(max_length=200, default="")
     category = models.CharField(max_length=200, default="")
@@ -39,7 +40,7 @@ class Article(models.Model):
     article = models.ManyToManyField('self', through='Component', blank=True, symmetrical=False,
                                      related_name='related_components')
     buying_price = models.FloatField(validators=[is_positive], default=1)
-    stock = models.IntegerField(validators=[is_positive], default=0)
+    stock = models.IntegerField(default=0)
     location_price = models.FloatField(validators=[is_positive], default=1)
     weight = models.FloatField(validators=[is_positive], default=1)
     minimal_lot = models.IntegerField(validators=[is_positive], default=1)
@@ -66,6 +67,35 @@ class Article(models.Model):
             return weighted_sum
         return w
 
+    def generate_internal_id(self):
+        gen_id = [[None, 'Son', "Lumière", 'Vidéo', 'Structure', 'Electricité', 'Logistique', 'Technicien'],
+                  ['Console', 'Enceinte', 'Ampli', 'Liaisons HF', 'Microphone', 'Intercom', 'Câblage',
+                  'Accessoire', 'Autre'],
+                  ['Pupitre', 'Gradateur', 'Splitter', 'Projecteur', 'Lyre', 'Câblage'],
+                  ['Caméra', 'Régie', 'Convertisseur', 'Accessoire'],
+                  ['Levage', 'Structure', 'Scène'],
+                  ['Câblage', 'Armoire'],
+                  ['Transport'],
+                  ['Régie']]
+
+        cat, sub_cat = self.category, self.sub_category
+        id0 = gen_id[0].index(cat)
+
+        start_id = f'{id0}{gen_id[id0].index(sub_cat)}'
+
+        end_id = str(Article.objects.filter(internal_id__startswith=start_id).count() + 1).zfill(3)
+
+        return f'{start_id}{end_id}'
+
+
+@receiver(pre_save, sender=Article)
+def pre_save_article(sender, instance, **kwargs):
+    if instance.internal_id == "00000":
+        instance.internal_id = instance.generate_internal_id()
+
+    if instance.product == "":
+        instance.product = f'{instance.sub_category} {instance.denomination}'
+
 
 @receiver(post_save, sender=Article)
 def post_save_article(sender, instance, **kwargs):
@@ -90,6 +120,11 @@ class Component(models.Model):
 
     def __str__(self):
         return f'Article {self.article} from {self.kit}'
+
+@receiver(post_save, sender=Component)
+def post_save_component(sender, instance, **kwargs):
+    kit = instance.kit
+    kit.save()
 
 
 class Client(models.Model):
@@ -139,8 +174,8 @@ class Command(models.Model):
     start_loc = models.DateTimeField()
     end_loc = models.DateTimeField()
 
-    @staticmethod
-    def generate_id():
+
+    def generate_id(self):
         formatted_date = timezone.now().strftime('%Y%m%d')
         formatted_numero = str(Command.objects.filter(billing_id__startswith=formatted_date).count()+1).zfill(2)
         return f'{formatted_date}-{formatted_numero}'
