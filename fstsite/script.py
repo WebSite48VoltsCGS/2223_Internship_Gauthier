@@ -64,14 +64,22 @@ cmdBash = r"pdflatex D:\Git\Projet\2223_Internship_Gauthier\fstsite\devis\devis.
 
 # Function definition
 
+def better_round(x):
+    if int(10*(100*x - int(100*x))) < 5:
+        return round(x, 2)
+    else:
+        return round(x+0.01, 2)
+
 
 def init_list():
     produits = []
     for commands in CommandLine.objects.filter(command=command.id):
         produit = [[f'{commands.article.product} {commands.article.description}', commands.article.category],
-                  [[article, [art for art in article.article.all()]] for article in commands.article.article.all()],
+                  [[(article, int(Component.objects.get(kit=commands.article, article=article).number)),
+                    [(art, int(Component.objects.get(kit=article, article=art).number))
+                     for art in article.article.all()]] for article in commands.article.article.all()],
                   commands.number,
-                  commands.article.buying_price,
+                  better_round(commands.article.buying_price),
                   0,
                   1,
                   0]
@@ -80,15 +88,34 @@ def init_list():
     return sorted(produits, key=lambda x: x[0][1])
 
 
+
 def V48():
     # find a way to get: nomPrestation, lieuPrestation, debutPrestation, finPrestation, ClientNom, ClientAdresse
     # and add them to the doc
-    address = client.adress
-    name = (client.user_name, client.user_lastname)
+
+    address = client.adress.split(" ")
+    adress1 = " ".join(address[:-2])
+    adress2 = " ".join(address[-2:])
+
+    if client.asso:
+        name = client.name
+    else:
+        name = f'{client.user_name} {client.user_lastname}'
+
     deposit = 0
 
+    not_yet = "A changer"
+
     adderPreamble(noEscape(f"\\def\\devisNum{{{bidNumber}}}"))
-    adderPreamble(noEscape(f"\\def\\deposit{{{deposit}}}"))
+    adderPreamble(noEscape(f"\\def\\nomPrestation{{{not_yet}}}"))
+    adderPreamble(noEscape(f"\\def\\lieuPrestation{{{not_yet}}}"))
+    adderPreamble(noEscape(f"\\def\\debutPrestation{{{not_yet}}}"))
+    adderPreamble(noEscape(f"\\def\\finPrestation{{{not_yet}}}"))
+
+    adderPreamble(noEscape(f"\\def\\ClientNom{{{name}}}"))
+    adderPreamble(noEscape(f"\\def\\Adressf{{{adress1}}}"))
+    adderPreamble(noEscape(f"\\def\\Adresss{{{adress2}}}"))
+    adderPreamble(noEscape(f"\\def\\deposit{{{f'{deposit:.2f}'}}}"))
 
     with open(preamblePath, 'r', encoding='utf-8') as file:
         lines = file.readlines()
@@ -115,50 +142,79 @@ def header():
 
 def calcul(deposit):
     produits = init_list()
-    ssTotalHT = TotalHT = 0
+    TotalHT = 0
     TVA = 20
-    for produit in produits:
+
+    j, ssTotalTable = 0, []
+
+    for (i, produit) in enumerate(produits):
         total = produit[2]*produit[3]*produit[5]*(1-produit[4]/100)
-        ssTotalHT += total
+
+        try:
+            if produit[0][1] != produits[i][0][1]:
+                j += 1
+                ssTotalTable.append(total)
+            else:
+                ssTotalTable[j] += total
+        except:
+            ssTotalTable.append(total)
+
         TotalHT += total
         produit[6] = total
 
-    TotalTVA = TVA/100*TotalHT
+    TotalTVAToRound = TVA/100*TotalHT
+    TotalTVA = better_round(TotalTVAToRound)
     Total = TotalHT + TotalTVA
 
-    adderPreamble(noEscape(f"\\def\\TotalTVA{{{TotalTVA}}}"))
-    adderPreamble(noEscape(f"\\def\\Total{{{Total}}}"))
-    adderPreamble(noEscape(f"\\def\\TotalHT{{{TotalHT}}}"))
-    adderPreamble(noEscape(f"\\def\\ssTotalHT{{{ssTotalHT}}}"))
+    adderPreamble(noEscape(f"\\def\\TotalTVA{{{ f'{TotalTVA:.2f}' }}}"))
+    adderPreamble(noEscape(f"\\def\\Total{{{ f'{Total:.2f}' }}}"))
+    adderPreamble(noEscape(f"\\def\\TotalHT{{{ f'{TotalHT:.2f}' }}}"))
     adderPreamble(noEscape(f"\\def\\TVA{{{TVA}}}"))
-    adderPreamble(noEscape(f"\\def\\totalLeft{{{Total - deposit}}}"))
+    adderPreamble(noEscape(f"\\def\\totalLeft{{{ f'{Total - deposit:.2f}' }}}"))
 
-    return produits, TotalTVA, TotalHT, ssTotalHT, TVA
+    return produits, ssTotalTable, TotalTVA, TotalHT, TVA
 
 
-def createTable(produits_final):
-    bol = 1
-    if bol:
-        pass
-    else:
-        with open(tabularPath, 'r', encoding='utf-8') as file:
-            lines = file.readlines()
+def createTable(produits_final, ssTotalTable):
+    j = 0
+    mem = None
+    with open(tabularPath, 'r', encoding='utf-8') as file:
+        lines = file.readlines()
 
-        for line in lines:
-            if '%' in line:
-                for produit in produits_final:
-                    adder(noEscape(
-                        f"\\text{{{produit[0]}}} & {produit[1]} & {produit[2]} \EUR & {produit[3]}"
-                        f" \% & {produit[4]} & {produit[5]} \EUR \\\\"))
+    for line in lines:
+        if '%' in line:
+            for produit in produits_final:
+                if mem is None:
+                    mem = produit[0][1]
+                    adder(noEscape(f"\\textbf{{{mem}}} & & & & & \\\\"))
+                elif mem != produit[0][1]:
+                    adder(noEscape(f"Sous-total \\textbf{{{mem}}} & & & & & {f'{TotalTVA:.2f}'} \\\\"))
+                    adder(noEscape(f" & & & & & \\\\"))
+                    adder(noEscape(f"\\textbf{{{produit[0][1]}}} & & & & & \\\\"))
+                    mem = produit[0][1]
+                    j += 1
 
-                adder(noEscape(f"\hline \hline"))
-                adder(noEscape(r"Total HT & & & & & \totalHT \\"))
-                adder(noEscape(r"Total TVA (\TVA) & & & & & \totalTVA \\"))
+                adder(noEscape(
+                    f"{produit[0][0]}& {produit[2]} & {f'{produit[3]:.2f}'} & {produit[4]}"
+                    f" \% & {produit[5]} & {f'{produit[6]:.2f}'} \\\\"))
+                if produit[1]:
+                    for [(prod, nbr1), sub_prod] in produit[1]:
+                        adder(noEscape(f"\\textit{{{prod}}} & {nbr1} & & & & \\\\"))
+                        if sub_prod:
+                            for (sub, nbr2) in sub_prod:
+                                adder(noEscape(f"\\small\\textit{{{sub}}} & {nbr2} & & & & \\\\"))
 
-                adder(noEscape(r"\hline \hline"))
-                adder(noEscape(r"\textbf{Total TTC} & & & & & \\total \\\\"))
+            adder(noEscape(f"\\textbf{{Sous-total {mem}}} & & & & & {f'{ssTotalTable[j]:.2f}'}\\\\"))
+            adder(noEscape(f' & & & & & \\\\'))
 
-            adder(noEscape(str(line.replace('\n', "", 1))))
+            adder(noEscape(f"\hline \hline"))
+            adder(noEscape(f"Total HT & & & & & \TotalHT \\\\"))
+            adder(noEscape(f"Total TVA (\TVA \%)  & & & & & \TotalTVA \\\\"))
+
+            adder(noEscape(f"\hline \hline"))
+            adder(noEscape(f"\\textbf{{Total TTC}} & & & & & \Total \\\\"))
+
+        adder(noEscape(str(line.replace('\n', "", 1))))
 
 
 
@@ -167,7 +223,7 @@ def createTable(produits_final):
 def writing():
     deposit = 0
 
-    produits_final, TotalTVA, TotalHT, ssTotalHT, TVA = calcul(deposit)
+    produits_final, ssTotalTable, TotalTVA, TotalHT, TVA = calcul(deposit)
 
     # Preamble
     V48()
@@ -176,17 +232,7 @@ def writing():
     header()
 
     # Bid
-    createTable(produits_final)
-
-
-    bid.append(noEscape(client))
-    bid.append(noEscape(f'{command}\n'))
-    id_command = command.id
-    for cmd in CommandLine.objects.filter(command=id_command):
-        adder(noEscape(f'{cmd.article} {cmd.article.buying_price} x {cmd.number}\n'))
-    # for cmd in command.articles.all():
-
-    #    adder(noEscape(f'{cmd} {cmd.buying_price}\n'))
+    createTable(produits_final, ssTotalTable)
 
     # Bank
     bank()

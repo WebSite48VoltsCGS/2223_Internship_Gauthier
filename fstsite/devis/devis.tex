@@ -18,14 +18,20 @@
 \usepackage{datetime}
 \usepackage{numprint}
 
-\def\TotalTVA{47.0}
-\def\Total{282.0}
-\def\TotalHT{235.0}
-\def\ssTotalHT{235.0}
+\def\TotalTVA{47.00}
+\def\Total{282.00}
+\def\TotalHT{235.00}
 \def\TVA{20}
-\def\totalLeft{282.0}
+\def\totalLeft{282.00}
 \def\devisNum{20230823-01}
-\def\deposit{0}
+\def\nomPrestation{A changer}
+\def\lieuPrestation{A changer}
+\def\debutPrestation{A changer}
+\def\finPrestation{A changer}
+\def\ClientNom{Hervé DUPUIS}
+\def\Adressf{20 rue des corvées}
+\def\Adresss{95000 CERGY}
+\def\deposit{0.00}
 \def\societe{48 Volts}
 \def\adresseM{7 chemin des libellules ~-~ 95800 \textsc{Courdimanche}}
 \def\adresse2l{7 chemin des libellules \\ 95800 \textsc{Courdimanche}}
@@ -61,39 +67,52 @@
 	\end{tabular}
 \end{center}
 
-%\begin{center}
-%\setcellgapes{10pt} 
-%\begin{tabular}{cc}
-%	\begin{minipage}{10cm}
-%		\begin{tabular}{|l||l|}
-%			\multicolumn{2}{l}{Devis n°\devisNum{} édité le \today} 					\\ \hline 
-%			\multicolumn{2}{|l|}{\textbf{Intitulé :} \nomPrestation} 										\\ \hline \hline
-%			\multicolumn{2}{|l|}{\textbf{Lieu de la prestation :} \lieuPrestation}		\\ \hline \hline 
-%			\textbf{Horaire de livraison :} & \textbf{Horaire de reprise :} \\
-%			\small{\debutPrestation} & \small{\finPrestation} \\ \hline			
-%		\end{tabular}
-% 	\end{minipage}
-% 	& 
-% 	\begin{minipage}{7cm}
-% 		\begin{tabular}{l}
-% 			\textbf{Client : }	\\
-%	 		\ClientNom \\
-%			\ClientAdresse
-%	 	\end{tabular} 		 
-% 	\end{minipage} \\
-%\end{tabular}
-%\end{center}
-Hervé DUPUIS
-Commande 20230823-01 from Hervé DUPUIS
-
-Accessoire - 3.0 x 3
-
-Accessoire 21302 15.0 x 5
-
-Câblage - 0.5 x 2
-
-Console M32R-Live, DL32 150.0 x 1
-
+\begin{center}
+\setcellgapes{10pt}
+\begin{tabular}{cc}
+	\begin{minipage}{10cm}
+		\begin{tabular}{|l||l|}
+			\multicolumn{2}{l}{Devis n°\devisNum édité le \today} 					\\ \hline
+			\multicolumn{2}{|l|}{\textbf{Intitulé :} \nomPrestation} 										\\ \hline \hline
+			\multicolumn{2}{|l|}{\textbf{Lieu de la prestation :} \lieuPrestation}		\\ \hline \hline
+			\textbf{Horaire de livraison :} & \textbf{Horaire de reprise :} \\
+			\small{\debutPrestation} & \small{\finPrestation} \\ \hline
+		\end{tabular}
+ 	\end{minipage}
+ 	&
+ 	\begin{minipage}{7cm}
+ 		\begin{tabular}{l}
+ 			\textbf{Client : }	\\
+	 		\ClientNom \\
+			\Adressf \\
+            \Adresss
+	 	\end{tabular}
+ 	\end{minipage} \\
+\end{tabular}
+\end{center}
+\begin{center}
+	\begin{longtable}{|p{7.8cm}|r|r|r|r|r|}
+		\hline \textbf{Désignation} & \textbf{Qté} & \textbf{P.U. HT (\EUR)} & \textbf{Remise} & \textbf{Coeff} & \textbf{Montant (\EUR)}	\\ \hline \endhead
+		\hline \hline
+\textbf{Son} & & & & & \\
+Accessoire - Pied de micro – grand& 3 & 3.00 & 0 \% & 1 & 9.00 \\
+Accessoire 21302 Pied d’enceinte avec manivelle& 5 & 15.00 & 0 \% & 1 & 75.00 \\
+Câblage - Câble micro XLR – 3m& 2 & 0.50 & 0 \% & 1 & 1.00 \\
+Console M32R-Live, DL32 Console numérique 16in / 8out local, 32in / 16out DL32, 50m Ethercon RJ45& 1 & 150.00 & 0 \% & 1 & 150.00 \\
+\textit{Ampli IPD 1200} & 2 & & & & \\
+\textit{Enceinte PS8} & 3 & & & & \\
+\textbf{Sous-total Son} & & & & & 235.00\\
+ & & & & & \\
+\hline \hline
+Total HT & & & & & \TotalHT \\
+Total TVA (\TVA \%)  & & & & & \TotalTVA \\
+\hline \hline
+\textbf{Total TTC} & & & & & \Total \\
+%
+        \hline
+	\end{longtable}
+\end{center}
+\vfill
 \vfill
 \begin{center}
 \begin{tabular}{|crl|}
