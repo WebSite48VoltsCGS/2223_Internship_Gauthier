@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  28 AUG 2023 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  29 AUG 2023 10:55
 entering extended mode
-**D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230823-01.tex
-(D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230823-01.tex
+**D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230829-01.tex
+(D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230829-01.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -402,8 +402,8 @@ pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count318
 \l__pdf_internal_box=\box53
-) (devis_20230823-01.aux)
-\openout1 = `devis_20230823-01.aux'.
+) (devis_20230829-01.aux)
+\openout1 = `devis_20230829-01.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -516,24 +516,13 @@ LaTeX Font Info:    Trying to load font information for U+mvs on input line 95.
 
 
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/marvosym\umvs.fd)
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10.95> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 102.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 9.85492pt on input line 102.
-LaTeX Font Info:    Font shape `T1/fve/m/it' in size <10> not available
-(Font)              Font shape `T1/fve/m/sl' tried instead on input line 104.
-LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 104.
-LaTeX Font Info:    Font shape `TS1/fve/m/it' in size <10> not available
-(Font)              Font shape `TS1/fve/m/sl' tried instead on input line 104.
-LaTeX Font Info:    Font shape `TS1/fve/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 104.
-
-Underfull \vbox (badness 10000) detected at line 115
+Underfull \vbox (badness 10000) detected at line 108
  []
 
 
 AED: lastpage setting LastPage
+LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 172.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -541,38 +530,37 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Faking \texteuro for font family fve
-(Font)              in TS1 encoding on input line 179.
+(Font)              in TS1 encoding on input line 172.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.8984pt on input line 179.
+(Font)              scaled to size 6.8984pt on input line 172.
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 179.
+(Font)              using `T1/fve/m/n' instead on input line 172.
 
 [1
 
 {C:/Users/Minorzar/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
- (devis_20230823-01.aux)
+ (devis_20230829-01.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6791 strings out of 479697
- 98478 string characters out of 2865709
- 461016 words of memory out of 3000000
- 23721 multiletter control sequences out of 15000+200000
- 430968 words of font info for 54 fonts, out of 3000000 for 9000
+ 6782 strings out of 479697
+ 98369 string characters out of 2865709
+ 456013 words of memory out of 3000000
+ 23715 multiletter control sequences out of 15000+200000
+ 425912 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,15n,85p,1075b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 <C:/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C
 :/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/
-Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Us
-ers/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/public/marvosym/marvosym
-.pfb>
-Output written on devis_20230823-01.pdf (1 page, 70360 bytes).
+Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/public/marvosym/marvos
+ym.pfb>
+Output written on devis_20230829-01.pdf (1 page, 64118 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

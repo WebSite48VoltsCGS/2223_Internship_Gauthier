@@ -93,3 +93,20 @@ def devis(request):
             return JsonResponse({'articles': articles_data})
 
     return render(request, 'devis/devis.html', {'commande': command})
+
+def new_bid(request):
+    clients = Client.objects.all()
+
+    client_id = None
+
+    if request.GET.get("client"):
+        client_id = request.GET.get("client")
+
+    if request.method == 'GET':
+        if client_id:
+            client = Client.objects.get(id=client_id)
+            client_data = {'asso': client.asso, 'name': client.name,
+                           'surname': client.user_name, 'lastname': client.user_lastname}
+            return JsonResponse({'clientSelected': client_data})
+
+    return render(request, 'devis/new.html', {'clients': clients})
