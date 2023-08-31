@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+{% load static %}
 <head>
-    <meta charset="UTF-8">
-    <title>Update old bid</title>
+    <title>Bid update</title>
     <link rel="stylesheet" href="{% static 'devis/style.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'devis/update.js' %}"></script>
 </head>
 <body>
-
+    <h1>Bid update</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="Commande">Id du devis :</label>
+        <select id="Commande" onchange="loadArticles(); updateHiddenField()">
+            <option value = "">-- Choose a bid ref --</option>
+            {% for comm in commande %}
+                <option value="{{ comm.billing_id }}">{{ comm.billing_id }}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" id="selected_value" name="selected_value" value="">
+        <br>
+        <select name="Article" id="Article" hidden>
+            <option value="">-- Choose an article --</option>
+            {% for article in article_data %}
+                <option value="{{ article }}" data-price="{{ article.price }}">{{ article.product }} {{article.internalId}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <table id="tableInputs">
+            <tr>
+                <th>Article</th>
+                <th>Number</th>
+                <th>Coeff</th>
+                <th>Discount</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <button type="button" onclick="ajouterLigne()">+</button>
+        <br>
+        <label id="nomPrestation">Prestation name :</label>
+        <input type="text" name="nomPrestation">
+        <br>
+        <label id="lieuPrestation">Prestation place :</label>
+        <input type="text" name="lieuPrestation">
+        <br>
+        <label id="debPrestation">Prestation starts :</label>
+        <input type="datetime-local" name="debPrestation">
+        <br>
+        <label id="finPrestation">Prestation ends :</label>
+        <input type="datetime-local" name="finPrestation">
+        <br>
+        <label id="Deposit">Deposit :</label>
+        <input type="text" name="Deposit">
+        <br>
+        <button type="submit" id="generateButton">Generate</button>
+    </form>
 </body>
 </html>

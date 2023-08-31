@@ -174,8 +174,9 @@ def createTable(bid, produits_final, ssTotalTable):
                     mem = produit[0][1]
                     j += 1
 
+                article = produit[0][0].replace("&", r"\&").replace("$", r"\$")
                 bid.append(noEscape(
-                    f"{produit[0][0]}& {produit[2]} & {f'{produit[3]:.2f}'} & {produit[4]}"
+                    f"{article}& {produit[2]} & {f'{produit[3]:.2f}'} & {produit[4]}"
                     f" \% & {produit[5]} & {f'{produit[6]:.2f}'} \\\\"))
                 if produit[1]:
                     for [(prod, nbr1), sub_prod] in produit[1]:
