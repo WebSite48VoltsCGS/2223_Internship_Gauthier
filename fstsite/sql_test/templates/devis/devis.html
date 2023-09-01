@@ -5,19 +5,20 @@
     <title>Bid generation</title>
     <link rel="stylesheet" href="{% static 'devis/style.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{% static 'devis/fun.js' %}"></script>
+    <script src="{% static 'devis/devis.js' %}"></script>
 </head>
 <body>
     <h1>Bid generation</h1>
     <form method="post" action="">
         {% csrf_token %}
         <label for="Commande">Id du devis :</label>
-        <select id="Commande" onchange="loadArticles()">
-            <option value = ""></option>
+        <select id="Commande" onchange="loadArticles(); updateHiddenField()">
+            <option value = "">-- Choose a bid ref --</option>
             {% for comm in commande %}
                 <option value="{{ comm.billing_id }}">{{ comm.billing_id }}</option>
             {% endfor %}
         </select>
+        <input type="hidden" id="selected_value" name="selected_value" value="">
         <br>
         <label for="articles-list">Article :</label>
         <div id="articles-list">
@@ -30,15 +31,15 @@
         <input type="text" name="lieuPrestation">
         <br>
         <label id="debPrestation">Prestation starts :</label>
-        <input type="text" name="debPrestation">
+        <input type="datetime-local" name="debPrestation">
         <span class="footnote">(Can be left empty)</span>
         <br>
         <label id="finPrestation">Prestation ends :</label>
-        <input type="text" name="finPrestation">
+        <input type="datetime-local" name="finPrestation">
         <span class="footnote">(Can be left empty)</span>
         <br>
-        <label id="Acompte">Acompte :</label>
-        <input type="text" name="Acompte">
+        <label id="Deposit">Deposit :</label>
+        <input type="text" name="Deposit">
         <br>
         <button type="submit">Generate</button>
     </form>

@@ -1,16 +1,26 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, FileResponse
 from django.views import generic
 from django.shortcuts import render
+from django.core import serializers
 
-from .models import Article, Client, Command
+from .models import Article, Client, Command, CommandLine
+from .script import writing
+import os
+import json
 
 
-# Macro and variable
+# Macro, variable and function
 
-prestationName = ""
-prestationLoc = ""
-debPrestation = ""
-finPrestation = ""
+def betterDate(date):
+    if date != "":
+        month = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre',
+             'Novembre', 'Décembre']
+
+        onlyDate = date[:10]
+        onlyDate = onlyDate.split("-")
+        print(onlyDate)
+        return f'{onlyDate[2]} {month[int(onlyDate[1])-1]} {onlyDate[0]}'
+    return date
 
 # Create your views here.
 
@@ -49,21 +59,217 @@ class CommandeView(generic.DetailView):
         return Command.objects.order_by("article")
 
 def devis(request):
-    global prestationLoc, prestationName, debPrestation, finPrestation
-
     command = Command.objects.all()
+    comm_id = None
+
+    if request.GET.get("billing_id"):
+        comm_id = request.GET.get("billing_id")
 
     if request.method == 'POST':
+
+        directory = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis"
+        for filename in os.listdir(directory):
+            if filename.lower().endswith('.png'):
+                continue
+            file_path = os.path.join(directory, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+
         prestationName = request.POST.get('nomPrestation')
         prestationLoc = request.POST.get('lieuPrestation')
         debPrestation = request.POST.get('debPrestation')
         finPrestation = request.POST.get('finPrestation')
+        bidId = request.POST.get('selected_value')
+        coeff = request.POST.getlist('coeff_undefined')
+        discount = request.POST.getlist('discount_undefined')
+        deposit = request.POST.get('Deposit')
+
+        writing(name=prestationName, loc=prestationLoc, deb=debPrestation, fin=finPrestation, deposit=deposit,
+                discount=discount, coeff=coeff, bidId=bidId)
+
+        file_path = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis\\devis_{bidId}.pdf"
+        response = FileResponse(open(file_path, 'rb'))
+        response['Content-Disposition'] = f'attachment; filename="devis_{bidId}.pdf"'
+
+        return response
 
     elif request.method == 'GET':
-        comm_id = request.GET.get('billing_id')
         if comm_id:
             articles = Article.objects.filter(commandline__command__billing_id=comm_id)
             articles_data = [{'name': article.product, 'value': article.is_multiple} for article in articles]
             return JsonResponse({'articles': articles_data})
 
     return render(request, 'devis/devis.html', {'commande': command})
+
+def new_bid(request):
+    test = True
+    clients = [{'name': client, 'id': client.id} for client in Client.objects.all()]
+    articles = [{'product': article.product, 'internalId': article.internal_id, 'price': article.buying_price}
+                for article in Article.objects.all()]
+
+    if request.method == 'POST':
+
+        directory = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis"
+        for filename in os.listdir(directory):
+            if filename.lower().endswith('.png'):
+                continue
+            file_path = os.path.join(directory, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+
+        client = request.POST.get('Client')
+        dateStart = request.POST.get('datestart')
+        dateEnd = request.POST.get('dateend')
+        bidArticles = request.POST.getlist('Article')
+        number = request.POST.getlist('nombre[]')
+        coeff = request.POST.getlist('coeff[]')
+        discount = request.POST.getlist('reduction[]')
+        nomPrestation = request.POST.get('nomPrestation')
+        nomPlace = request.POST.get('nomPlace')
+        deposit = request.POST.get('Deposit')
+
+        bidArticles.pop(0)
+
+        idArticles = [Article.objects.get(internal_id=json.loads(bidArticles[i].replace("'", "\""))['internalId'])
+                      for i in range(len(bidArticles))]
+
+        if not deposit:
+            deposit = 0
+        if '' in coeff:
+            coeff = [1 for _ in range(len(bidArticles))]
+        if '' in discount:
+            discount = [0 for _ in range(len(bidArticles))]
+        if dateEnd is None:
+            dateEnd = ""
+
+
+
+        search_string = "'id': "
+        id_value = ""
+
+        start_index = client.find(search_string)
+        if start_index != -1:
+            start_index += len(search_string)
+            end_index = client.find("}", start_index)
+            if end_index == -1:
+                end_index = len(input_string)
+            id_value = client[start_index:end_index].strip()
+
+        client = Client.objects.get(id=int(id_value))
+
+        if dateEnd == "":
+            command = Command(client=client, loc_place=nomPlace, start_loc=dateStart)
+        else:
+            command = Command(client=client, loc_place=nomPlace, start_loc=dateStart, end_loc=dateEnd,
+                              description=nomPrestation, deposit=deposit)
+        command.save()
+
+        for i, article in enumerate(idArticles):
+            line = CommandLine(command=command, article=article, number=int(number[i]), coeff=int(coeff[i]),
+                               discount=int(discount[i]))
+            line.save()
+
+        writing(name=nomPrestation, loc=nomPlace, deb=betterDate(dateStart), fin=betterDate(dateEnd), deposit=deposit,
+                discount=discount, coeff=coeff, bidId=command.billing_id)
+
+        file_path = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis\\devis_{command.billing_id}.pdf"
+        response = FileResponse(open(file_path, 'rb'))
+        response['Content-Disposition'] = f'attachment; filename="devis_{command.billing_id}.pdf"'
+
+        return response
+
+    return render(request, 'devis/new.html', {'article_data': articles, 'clients': clients})
+
+
+def old_bid(request):
+    command = Command.objects.all()
+    articles = [{'product': article.product, 'internalId': article.internal_id, 'price': article.buying_price}
+                for article in Article.objects.all()]
+    comm_id = None
+
+    if request.GET.get("billing_id"):
+        comm_id = request.GET.get("billing_id")
+
+    if request.method == 'POST':
+
+        bidId = request.POST.get('selected_value')
+
+        commande = Command.objects.get(billing_id=bidId)
+        commande_lines = CommandLine.objects.filter(command=commande)
+
+        articleLine = [Article.objects.get(id=line.article.id) for line in commande_lines]
+
+        bidArticles = request.POST.getlist('Article')
+        number = request.POST.getlist('nombre[]')
+        coeff = request.POST.getlist('coeff[]')
+        discount = request.POST.getlist('reduction[]')
+
+        bidArticles.pop(0)
+        bidArticlesObj = [Article.objects.get(internal_id=article) for article in bidArticles]
+        for (i, article) in enumerate(bidArticlesObj):
+            if article in articleLine:
+                line = CommandLine.objects.get(command=commande, article=article)
+                line.coeff = coeff[i]
+                line.number = number[i]
+                line.discount = discount[i]
+                line.save()
+                articleLine.pop(articleLine.index(article))
+            else:
+                line = CommandLine(command=commande, article=article, coeff=coeff[i], number=number[i],
+                                   discount=discount[i])
+                line.save()
+
+        for article in articleLine:
+            line = CommandLine.objects.get(command=commande, article=article)
+            line.delete()
+
+        prestationName = request.POST.get('nomPrestation')
+        prestationLoc = request.POST.get('lieuPrestation')
+        debPrestation = request.POST.get('debPrestation')
+        finPrestation = request.POST.get('finPrestation')
+        deposit = request.POST.get('Deposit')
+
+        commande.deposit = deposit
+        commande.loc_place = prestationLoc
+        commande.description = prestationName
+        commande.start_loc = debPrestation
+        if finPrestation != "":
+            commande.end_loc = finPrestation
+        else:
+            commande.end_loc = None
+
+        commande.save()
+
+
+        directory = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis"
+        for filename in os.listdir(directory):
+            if filename.lower().endswith('.png'):
+                continue
+            file_path = os.path.join(directory, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+
+        writing(name=prestationName, loc=prestationLoc, deb=betterDate(debPrestation), fin=betterDate(finPrestation),
+                deposit=deposit, discount=discount, coeff=coeff, bidId=bidId)
+
+        file_path = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis\\devis_{bidId}.pdf"
+        response = FileResponse(open(file_path, 'rb'))
+        response['Content-Disposition'] = f'attachment; filename="devis_{bidId}.pdf"'
+
+        return response
+
+    if request.method == 'GET':
+        comm_id = request.GET.get("billing_id")
+        if comm_id:
+            commande = Command.objects.get(billing_id=comm_id)
+            lines = [{'article': line.article.internal_id, 'number': line.number, 'coeff': line.coeff,
+                      'discount': line.discount} for line in CommandLine.objects.filter(command=commande)]
+            print(lines)
+            comm = {'desc': commande.description, 'place': commande.loc_place, 'start': commande.start_loc,
+                     'end': commande.end_loc, 'dep': commande.deposit}
+            return JsonResponse({'lines': lines, 'commande': comm})
+
+    return render(request, 'devis/update.html', {'article_data': articles, 'commande': command})

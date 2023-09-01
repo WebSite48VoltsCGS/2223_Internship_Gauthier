@@ -1,11 +1,13 @@
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import viewsets
 
 import sql_test.models as sqlm
 from .serializers import ArticleSerializer, ClientSerializer, ComponentSerializer,\
                          CommandSerializer, CommandLineSerializer
 
+ReadOnlyModelViewSet = viewsets.ReadOnlyModelViewSet
 
 class MultipleSerializerMixin:
 
@@ -16,7 +18,7 @@ class MultipleSerializerMixin:
             return self.detail_serializer_class
         return super().get_serializer_class()
 
-class ArticleViewset(ModelViewSet):
+class ArticleViewset(MultipleSerializerMixin, ReadOnlyModelViewSet):
 
     serializer_class = ArticleSerializer
 
@@ -35,7 +37,7 @@ class AdminArticleViewSet(MultipleSerializerMixin, ModelViewSet):
     def get_queryset(self):
         return sqlm.Article.objects.all()
 
-class ClientViewset(ModelViewSet):
+class ClientViewset(MultipleSerializerMixin, ReadOnlyModelViewSet):
 
     serializer_class = ClientSerializer
 
@@ -54,7 +56,7 @@ class AdminClientViewSet(MultipleSerializerMixin, ModelViewSet):
     def get_queryset(self):
         return sqlm.Client.objects.all()
 
-class ComponentViewset(ModelViewSet):
+class ComponentViewset(MultipleSerializerMixin, ReadOnlyModelViewSet):
 
     serializer_class = ComponentSerializer
 
@@ -74,7 +76,7 @@ class AdminComponentViewSet(MultipleSerializerMixin, ModelViewSet):
     def get_queryset(self):
         return sqlm.Component.objects.all()
 
-class CommandViewset(ModelViewSet):
+class CommandViewset(MultipleSerializerMixin, ReadOnlyModelViewSet):
 
     serializer_class = CommandSerializer
 
@@ -94,7 +96,7 @@ class AdminCommandViewSet(MultipleSerializerMixin, ModelViewSet):
     def get_queryset(self):
         return sqlm.Command.objects.all()
 
-class CommandLineViewset(ModelViewSet):
+class CommandLineViewset(MultipleSerializerMixin, ReadOnlyModelViewSet):
 
     serializer_class = CommandLineSerializer
 

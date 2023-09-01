@@ -76,11 +76,13 @@ class CommandSerializer(serializers.ModelSerializer):
         model = sqlm.Command
         fields = ['billing_id',
                   'client',
+                  'description',
                   'articles',
                   'is_payed',
                   'billing_date',
                   'paiment_date',
                   'loc_place',
+                  'deposit',
                   'start_loc',
                   'end_loc', ]
 
@@ -96,7 +98,9 @@ class CommandLineSerializer(serializers.ModelSerializer):
         model = sqlm.CommandLine
         fields = ['command',
                   'article',
-                  'number']
+                  'number',
+                  'coeff',
+                  'discount', ]
 
     def validate(self, data):
         if sqlm.CommandLine.objects.filter(article=data['article'], command=data['command']).exists():

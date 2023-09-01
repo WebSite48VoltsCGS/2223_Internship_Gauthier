@@ -18,7 +18,7 @@ from django.db.models.signals import post_save, pre_save
 
 def is_positive(value):
     if value < 0:
-        raise ValidationError("Cannot be 0 or a negative value")
+        raise ValidationError("Cannot be a negative value")
 
 def is_empty(tab):
     return not tab
@@ -166,13 +166,15 @@ class Client(models.Model):
 class Command(models.Model):
     billing_id = models.CharField(max_length=200, default="")
     client = models.ForeignKey(Client, on_delete=models.CASCADE, blank=True, null=True)
+    description = models.TextField(default="", blank=True)
     articles = models.ManyToManyField(Article, through='CommandLine')
     is_payed = models.BooleanField(default=False)
     billing_date = models.DateTimeField(default=timezone.now)
-    paiment_date = models.DateTimeField(blank=True)
+    paiment_date = models.DateTimeField(blank=True, null=True)
     loc_place = models.CharField(max_length=200, default="")
+    deposit = models.FloatField(validators=[is_positive], default=0)
     start_loc = models.DateTimeField()
-    end_loc = models.DateTimeField()
+    end_loc = models.DateTimeField(blank=True, null=True)
 
 
     def generate_id(self):
@@ -193,6 +195,8 @@ class CommandLine(models.Model):
     command = models.ForeignKey(Command, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     number = models.PositiveIntegerField(default=1)
+    coeff = models.PositiveIntegerField(default=1)
+    discount = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f'Article {self.article} from {self.command}'
