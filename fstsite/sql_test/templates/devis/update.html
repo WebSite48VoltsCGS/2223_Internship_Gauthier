@@ -3,6 +3,7 @@
 {% load static %}
 <head>
     <title>Bid update</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="{% static 'devis/style.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'devis/update.js' %}"></script>
@@ -23,7 +24,7 @@
         <select name="Article" id="Article" hidden>
             <option value="">-- Choose an article --</option>
             {% for article in article_data %}
-                <option value="{{ article }}" data-price="{{ article.price }}">{{ article.product }} {{article.internalId}}</option>
+                <option value="{{ article.internalId }}" data-price="{{ article.price }}">{{ article.product }} {{article.internalId}}</option>
             {% endfor %}
         </select>
         <br>
@@ -38,20 +39,20 @@
         </table>
         <button type="button" onclick="ajouterLigne()">+</button>
         <br>
-        <label id="nomPrestation">Prestation name :</label>
-        <input type="text" name="nomPrestation">
+        <label>Prestation name :</label>
+        <input id="nomPrestation" type="text" name="nomPrestation" value="">
         <br>
-        <label id="lieuPrestation">Prestation place :</label>
-        <input type="text" name="lieuPrestation">
+        <label>Prestation place :</label>
+        <input  id="lieuPrestation" type="text" name="lieuPrestation" value="">
         <br>
-        <label id="debPrestation">Prestation starts :</label>
-        <input type="datetime-local" name="debPrestation">
+        <label>Prestation starts :</label>
+        <input id="debPrestation" type="datetime-local" name="debPrestation" value="">
         <br>
-        <label id="finPrestation">Prestation ends :</label>
-        <input type="datetime-local" name="finPrestation">
+        <label>Prestation ends :</label>
+        <input id="finPrestation" type="datetime-local" name="finPrestation" value="">
         <br>
-        <label id="Deposit">Deposit :</label>
-        <input type="text" name="Deposit">
+        <label>Deposit :</label>
+        <input id="Deposit" type="text" name="Deposit" value="">
         <br>
         <button type="submit" id="generateButton">Generate</button>
     </form>

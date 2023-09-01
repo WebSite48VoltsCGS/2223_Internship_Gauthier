@@ -1,0 +1,175 @@
+\documentclass[11pt,french]{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lastpage}%
+\usepackage{geometry}%
+\geometry{a4paper}%
+\usepackage{babel}%
+\usepackage{units}%
+\usepackage{bera}%
+\usepackage{graphicx}%
+\usepackage{fancyhdr}%
+\usepackage{fp}%
+\usepackage{longtable}%
+\usepackage{marvosym}%
+\usepackage{array}%
+\usepackage{multirow}%
+\usepackage{makecell}%
+\usepackage{datetime}%
+\usepackage{numprint}%
+%
+\def\TotalTVA{89.90}%
+\def\Total{539.40}%
+\def\TotalHT{449.50}%
+\def\TVA{20}%
+\def\totalLeft{488.90}%
+\def\devisNum{20230901-01}%
+\def\nomPrestation{Hervé DUPUIS}%
+\def\lieuPrestation{Cergy}%
+\def\debutPrestation{01 Septembre 2023}%
+\def\finPrestation{}%
+\def\ClientNom{Hervé DUPUIS}%
+\def\Adressf{20 rue des corvées}%
+\def\Adresss{95000 CERGY}%
+\def\deposit{50.50}%
+\def\societe{48 Volts}%
+\def\adresseM{7 chemin des libellules ~-~ 95800 \textsc{Courdimanche}}%
+\def\adresse2l{7 chemin des libellules \\ 95800 \textsc{Courdimanche}}%
+\def\capital{7 000 €}%
+\def\gerant{Nicolas \textsc{Papazoglou}}%
+\def\tel{06 09 28 15 36}%
+\def\mail{nicolas.papazoglou@48-volts.fr}%
+\def\contact{\gerant \\ Tel : \tel \\ Mail : \mail}%
+\def\lieu{\textsc{Courdimanche}}%
+\def\RCS{801 880 055 00018}%
+\def\web{www.48-volts.fr}%
+%
+%
+\geometry{verbose,tmargin=2em,bmargin=8em,lmargin=4em,rmargin=4em}%
+\thispagestyle{fancy}%
+\pagestyle{fancy}%
+\setlength{\parindent}{0pt}%
+\renewcommand{\headrulewidth}{0pt}%
+\cfoot{\societe{}, SARL au capital de \capital ~--~ \adresseM \newline Téléphone : \tel ~--~	RCS \RCS \\ Devis n°\devisNum{} ~--~ Page \thepage\ / \pageref{LastPage}}%
+%
+\begin{document}
+\normalsize
+\begin{center}
+	\begin{tabular}{ccc}
+%	\hline 
+		\begin{minipage}{5.5cm} \begin{center} \societe \\\footnotesize{ Son ~-~ Lumière \\ Structure ~-~ Vidéo} \end{center} \end{minipage} 
+		&
+		\begin{minipage}[c]{6cm} \begin{center} \includegraphics[width=6cm]{logo.png} \end{center} \end{minipage}
+		&
+		\begin{minipage}{5.5cm}\footnotesize{Web : \web \\ Tel : \tel \\ Mail : \mail} \end{minipage}
+		\\
+%	 \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+\setcellgapes{10pt}
+\begin{tabular}{cc}
+	\begin{minipage}{10cm}
+		\begin{tabular}{|l||l|}
+			\multicolumn{2}{l}{Devis n°\devisNum édité le \today} 					\\ \hline
+			\multicolumn{2}{|l|}{\textbf{Intitulé :} \nomPrestation} 										\\ \hline \hline
+			\multicolumn{2}{|l|}{\textbf{Lieu de la prestation :} \lieuPrestation}		\\ \hline \hline
+			\textbf{Horaire de livraison :} & \textbf{Horaire de reprise :} \\
+			\small{\debutPrestation} & \small{\finPrestation} \\ \hline
+		\end{tabular}
+ 	\end{minipage}
+ 	&
+ 	\begin{minipage}{7cm}
+ 		\begin{tabular}{l}
+ 			\textbf{Client : }	\\
+	 		\ClientNom \\
+			\Adressf \\
+            \Adresss
+	 	\end{tabular}
+ 	\end{minipage} \\
+\end{tabular}
+\end{center}
+\begin{center}
+	\begin{longtable}{|p{7.8cm}|r|r|r|r|r|}
+		\hline \textbf{Désignation} & \textbf{Qté} & \textbf{P.U. HT (\EUR)} & \textbf{Remise} & \textbf{Coeff} & \textbf{Montant (\EUR)}	\\ \hline \endhead
+		\hline \hline
+\textbf{Son} & & & & & \\
+Accessoire 21302 Pied d’enceinte avec manivelle& 5 & 15.00 & 10.0 \% & 2.0 & 135.00 \\
+Ampli PLM20000Q 4x 4400W @ 4 ohms, Lake Processing& 2 & 95.00 & 0.0 \% & 1.0 & 190.00 \\
+Enceinte Système PS8 x2, IPD2400, 2x pieds K\&M -& 3 & 80.00 & 50.0 \% & 1.0 & 120.00 \\
+Câblage - Cable HP - speakon 4x2.5mm2 – 3m& 2 & 0.50 & 10.0 \% & 5.0 & 4.50 \\
+\textbf{Sous-total Son} & & & & & 449.50\\
+ & & & & & \\
+\hline \hline
+Total HT & & & & & \TotalHT \\
+Total TVA (\TVA \%)  & & & & & \TotalTVA \\
+\hline \hline
+\textbf{Total TTC} & & & & & \Total \\
+%
+        \hline
+	\end{longtable}
+\end{center}
+\vfill
+\vfill
+\begin{center}
+\begin{tabular}{|crl|}
+	\hline
+	\multicolumn{3}{|c|}{\textbf{Conditions de commande et de règlement}} \\
+	\multicolumn{3}{|c|}{Devis valable 30 jours à renvoyer daté, signé, avec la mention "bon pour accord"} \\
+	Acompte & \textbf{\deposit \EUR} & \\
+	Solde &	\textbf{\Total \EUR} & à réception de la facture \\
+	Total (TTC) & \textbf{\totalLeft \EUR} & \\
+	\hline
+\end{tabular}
+\begin{tabular}{|cc|}
+	\hline
+	\begin{minipage}{10cm}
+	\begin{center}
+		\begin{tabular}{ccccc}
+		 	\multicolumn{5}{c}{\textbf{RIB}} \\
+		 	\hline
+			Banque & Guichet & N° Compte & Clé & Devise \\
+			30066  & 10139 & 00020525801 & 19 & EUR \\ 
+			\multicolumn{5}{c}{\textbf{IBAN}} \\
+			\hline
+			\multicolumn{5}{c}{FR76 3006 6101 3900 0205 2580 119}
+		\end{tabular}
+	\end{center}
+	\end{minipage} &
+	\begin{minipage}{7cm}
+	\begin{center}
+	\begin{tabular}{c}
+		\textbf{Domiciliation} \\ \hline
+		CIC VAUREAL \\
+		\\
+		\textbf{BIC} \\ \hline
+		CMCIFRPP
+	\end{tabular}
+	\end{center}
+	\end{minipage} \\ \hline \hline
+
+	\begin{minipage}{10cm}
+	\begin{center}	
+	\begin{tabular}{c}
+		\textbf{Domiciliation} \\ \hline
+		CIC VAUREAL \\
+		1 place du Rendez Vous \\
+		95490 VAUREAL
+	\end{tabular}
+	\end{center}
+	\end{minipage} &
+	\begin{minipage}{7cm}
+	\begin{center}
+	\begin{tabular}{c}
+	\textbf{Titulaire du compte} \\ \hline
+	48 Volts \\
+	7 chemin des libellules \\
+	95800 Courdimanche
+	\end{tabular}
+	\end{center}
+	\end{minipage}	 \\
+	\hline			
+\end{tabular}
+\end{center}
+\end{document}

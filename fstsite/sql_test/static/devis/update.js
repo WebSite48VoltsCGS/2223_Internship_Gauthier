@@ -25,16 +25,15 @@ $(document).ready(function() {
 
 
 function loadArticles() {
-    const articlesContainer = document.getElementById('articles-list');
     const selectedBillingId = document.getElementById('Commande').value;
-    articlesContainer.innerHTML = '';
 
     $.ajax({
-        url: '/devis/',
+        url: '/devis/update/',
         type: 'GET',
         data: {billing_id: selectedBillingId},
         success: function(response) {
             const lines = response.lines;
+            const command = response.commande;
             if (lines) {
                 for (const line of lines) {
                     var table = document.getElementById("tableInputs");
@@ -63,6 +62,22 @@ function loadArticles() {
                     actionsCell.innerHTML = '<button type="button" onclick="supprimerLigne(this)">x</button>';
                 }
 
+            }
+            if (command){
+                var name = document.getElementById("nomPrestation") ;
+                var place = document.getElementById("lieuPrestation") ;
+                var dateS = document.getElementById("debPrestation");
+                var dateE = document.getElementById("finPrestation") ;
+                var dep = document.getElementById("Deposit") ;
+
+                dateStart = command.start.slice(0, -1);
+                dateEnd = command.end.slice(0, -1);
+
+                name.value = command.desc;
+                place.value = command.place;
+                dateS.value = dateStart;
+                dateE.value = dateEnd;
+                dep.value = command.dep;
             }
         }
     })

@@ -18,8 +18,8 @@ def betterDate(date):
 
         onlyDate = date[:10]
         onlyDate = onlyDate.split("-")
-        print(onlyDate[1])
-        return f'{onlyDate[2]} {month[int(onlyDate[1]-1)]} {onlyDate[0]}'
+        print(onlyDate)
+        return f'{onlyDate[2]} {month[int(onlyDate[1])-1]} {onlyDate[0]}'
     return date
 
 # Create your views here.
@@ -194,6 +194,55 @@ def old_bid(request):
 
     if request.method == 'POST':
 
+        bidId = request.POST.get('selected_value')
+
+        commande = Command.objects.get(billing_id=bidId)
+        commande_lines = CommandLine.objects.filter(command=commande)
+
+        articleLine = [Article.objects.get(id=line.article.id) for line in commande_lines]
+
+        bidArticles = request.POST.getlist('Article')
+        number = request.POST.getlist('nombre[]')
+        coeff = request.POST.getlist('coeff[]')
+        discount = request.POST.getlist('reduction[]')
+
+        bidArticles.pop(0)
+        bidArticlesObj = [Article.objects.get(internal_id=article) for article in bidArticles]
+        for (i, article) in enumerate(bidArticlesObj):
+            if article in articleLine:
+                line = CommandLine.objects.get(command=commande, article=article)
+                line.coeff = coeff[i]
+                line.number = number[i]
+                line.discount = discount[i]
+                line.save()
+                articleLine.pop(articleLine.index(article))
+            else:
+                line = CommandLine(command=commande, article=article, coeff=coeff[i], number=number[i],
+                                   discount=discount[i])
+                line.save()
+
+        for article in articleLine:
+            line = CommandLine.objects.get(command=commande, article=article)
+            line.delete()
+
+        prestationName = request.POST.get('nomPrestation')
+        prestationLoc = request.POST.get('lieuPrestation')
+        debPrestation = request.POST.get('debPrestation')
+        finPrestation = request.POST.get('finPrestation')
+        deposit = request.POST.get('Deposit')
+
+        commande.deposit = deposit
+        commande.loc_place = prestationLoc
+        commande.description = prestationName
+        commande.start_loc = debPrestation
+        if finPrestation != "":
+            commande.end_loc = finPrestation
+        else:
+            commande.end_loc = None
+
+        commande.save()
+
+
         directory = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis"
         for filename in os.listdir(directory):
             if filename.lower().endswith('.png'):
@@ -203,17 +252,8 @@ def old_bid(request):
                 os.remove(file_path)
                 print(f"Deleted: {file_path}")
 
-        prestationName = request.POST.get('nomPrestation')
-        prestationLoc = request.POST.get('lieuPrestation')
-        debPrestation = request.POST.get('debPrestation')
-        finPrestation = request.POST.get('finPrestation')
-        bidId = request.POST.get('selected_value')
-        coeff = request.POST.getlist('coeff_undefined')
-        discount = request.POST.getlist('discount_undefined')
-        deposit = request.POST.get('Deposit')
-
-        writing(name=prestationName, loc=prestationLoc, deb=debPrestation, fin=finPrestation, deposit=deposit,
-                discount=discount, coeff=coeff, bidId=bidId)
+        writing(name=prestationName, loc=prestationLoc, deb=betterDate(debPrestation), fin=betterDate(finPrestation),
+                deposit=deposit, discount=discount, coeff=coeff, bidId=bidId)
 
         file_path = f"D:\\Git\Projet\\2223_Internship_Gauthier\\fstsite\\devis\\devis_{bidId}.pdf"
         response = FileResponse(open(file_path, 'rb'))
@@ -221,9 +261,15 @@ def old_bid(request):
 
         return response
 
-    elif request.method == 'GET':
+    if request.method == 'GET':
+        comm_id = request.GET.get("billing_id")
         if comm_id:
-            lines = CommandLine.objects.filter(command=Command.objects.get(billing_id=comm_id))
-            return JsonResponse({'lines': lines})
+            commande = Command.objects.get(billing_id=comm_id)
+            lines = [{'article': line.article.internal_id, 'number': line.number, 'coeff': line.coeff,
+                      'discount': line.discount} for line in CommandLine.objects.filter(command=commande)]
+            print(lines)
+            comm = {'desc': commande.description, 'place': commande.loc_place, 'start': commande.start_loc,
+                     'end': commande.end_loc, 'dep': commande.deposit}
+            return JsonResponse({'lines': lines, 'commande': comm})
 
     return render(request, 'devis/update.html', {'article_data': articles, 'commande': command})
