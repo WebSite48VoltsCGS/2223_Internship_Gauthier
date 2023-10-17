@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  1 SEP 2023 11:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.7)  1 SEP 2023 16:36
 entering extended mode
-**D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230901-01.tex
-(D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230901-01.tex
+**D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230901-02.tex
+(D:/Git/Projet/2223_Internship_Gauthier/fstsite/devis/devis_20230901-02.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -402,8 +402,8 @@ pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count318
 \l__pdf_internal_box=\box53
-) (devis_20230901-01.aux)
-\openout1 = `devis_20230901-01.aux'.
+) (devis_20230901-02.aux)
+\openout1 = `devis_20230901-02.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -518,13 +518,18 @@ LaTeX Font Info:    Trying to load font information for U+mvs on input line 95.
 
 
 (C:\Users\Minorzar\AppData\Local\Programs\MiKTeX\tex/latex/marvosym\umvs.fd)
-Underfull \vbox (badness 10000) detected at line 111
+Underfull \hbox (badness 6691) in paragraph at lines 99--99
+[]|\T1/fve/m/n/10.95 Enceinte Al-pha E (EM x2, B118 x2,
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 109
  []
 
 
 AED: lastpage setting LastPage
 LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
-(Font)              scaled to size 9.85492pt on input line 175.
+(Font)              scaled to size 9.85492pt on input line 173.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -532,17 +537,17 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Faking \texteuro for font family fve
-(Font)              in TS1 encoding on input line 175.
+(Font)              in TS1 encoding on input line 173.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
-(Font)              scaled to size 6.8984pt on input line 175.
+(Font)              scaled to size 6.8984pt on input line 173.
 
 LaTeX Font Warning: Font shape `T1/fve/m/sc' undefined
-(Font)              using `T1/fve/m/n' instead on input line 175.
+(Font)              using `T1/fve/m/n' instead on input line 173.
 
 [1
 
 {C:/Users/Minorzar/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo.png>]
- (devis_20230901-01.aux)
+ (devis_20230901-02.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -550,7 +555,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  6786 strings out of 479697
  98414 string characters out of 2865709
- 458004 words of memory out of 3000000
+ 457025 words of memory out of 3000000
  23717 multiletter control sequences out of 15000+200000
  429152 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -560,7 +565,7 @@ Here is how much of TeX's memory you used:
 :/Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/
 Users/Minorzar/AppData/Local/Programs/MiKTeX/fonts/type1/public/marvosym/marvos
 ym.pfb>
-Output written on devis_20230901-01.pdf (1 page, 64926 bytes).
+Output written on devis_20230901-02.pdf (1 page, 64198 bytes).
 PDF statistics:
  22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
